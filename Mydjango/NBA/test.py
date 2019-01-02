@@ -65,7 +65,7 @@ def  build_dataSet(all_data):
     X = []
     skip = 0
     for index, row in all_data.iterrows():
-
+        print(row)
         Wteam = row['WTeam']
         Lteam = row['LTeam']
 
@@ -129,13 +129,16 @@ def predict_winner(team_1, team_2, model):
 
 if __name__ == '__main__':
 
-    Mstat = pd.read_csv(folder + '/15-16Miscellaneous_Stat.csv')
-    Ostat = pd.read_csv(folder + '/15-16Opponent_Per_Game_Stat.csv')
-    Tstat = pd.read_csv(folder + '/15-16Team_Per_Game_Stat.csv')
+    # Mstat = pd.read_csv(folder + '/15-16Miscellaneous_Stat.csv')
+    # Ostat = pd.read_csv(folder + '/15-16Opponent_Per_Game_Stat.csv')
+    # Tstat = pd.read_csv(folder + '/15-16Team_Per_Game_Stat.csv')
+    Mstat = pd.read_csv(folder + '/17-18Miscellaneous Stats.csv')
+    Ostat = pd.read_csv(folder + '/17-18Opponent Per Game Stats.csv')
+    Tstat = pd.read_csv(folder + '/17-18Team Per Game Stats.csv')
 
     team_stats = initialize_data(Mstat, Ostat, Tstat)
 
-    result_data = pd.read_csv(folder + '/2015-2016_result.csv')
+    result_data = pd.read_csv(folder + '/17-18result.csv')
     X, y = build_dataSet(result_data)
 
     # 训练网络模型
@@ -149,7 +152,7 @@ if __name__ == '__main__':
     print(cross_val_score(model, X, y, cv=10, scoring='accuracy', n_jobs=-1).mean())
 
     print('Predicting on new schedule..')
-    schedule1617 = pd.read_csv(folder + '/16-17Schedule.csv')
+    schedule1617 = pd.read_csv(folder + '/18-19_Schedule.csv')
     result = []
     for index, row in schedule1617.iterrows():
         team1 = row['Vteam']
@@ -171,4 +174,4 @@ if __name__ == '__main__':
         writer.writerows(result)
         print('done.')
 
-    pd.read_csv('16-17Result.csv', header=0)
+    pd.read_csv('18-19Result.csv', header=0)
