@@ -13,7 +13,7 @@ import re
 class CreateDB():
     def __init__(self):
         self.config = {
-                "host": "192.168.6.195",
+                "host": "192.168.6.187",
                 "user": "root",
                 "password": "mysql",
                 "database": "mine"
@@ -35,7 +35,7 @@ class CreateDB():
             return 0
     
     def _create(self):
-        sql = "CREATE TABLE `{}` (`id` int(20) NOT NULL AUTO_INCREMENT,`ip_port` varchar(40) DEFAULT NULL COMMENT 'ip端口',`ip_area` varchar(40) DEFAULT NULL COMMENT 'IP地址',`socket_type` varchar(20) DEFAULT NULL COMMENT 'http类型',`sped` varchar(20) DEFAULT NULL COMMENT '速度',`link_sped` varchar(20) DEFAULT NULL COMMENT '连接速度',`validity` varchar(20) DEFAULT NULL COMMENT '有效期',`calidate` varchar(20) DEFAULT NULL COMMENT '测试时间',PRIMARY KEY (`id`),UNIQUE KEY (`ip_port`) USING BTREE)ENGINE=InnoDB AUTO_INCREMENT=42331 DEFAULT CHARSET=utf8;".format(self.table_name)
+        sql = "CREATE TABLE `{}` (`id` int(20) NOT NULL AUTO_INCREMENT,`ip_port` varchar(40) DEFAULT NULL COMMENT 'ip端口',`ip_area` varchar(40) DEFAULT NULL COMMENT 'IP地址',`socket_type` varchar(20) DEFAULT NULL COMMENT 'http类型',`sped` varchar(20) DEFAULT NULL COMMENT '速度',`link_sped` varchar(20) DEFAULT NULL COMMENT '连接速度',`validity` varchar(20) DEFAULT NULL COMMENT '有效期',`validate` varchar(20) DEFAULT NULL COMMENT '测试时间',PRIMARY KEY (`id`),UNIQUE KEY (`ip_port`) USING BTREE)ENGINE=InnoDB AUTO_INCREMENT=42331 DEFAULT CHARSET=utf8;".format(self.table_name)
         try:
             self.cursor.execute(sql)
             self.db.commit
@@ -73,7 +73,7 @@ class MyProxy():
         self.file = open('./proxy_{}.json'.format(socket_type), 'w')
 
         self.config = {
-            "host": "192.168.6.195",
+            "host": "192.168.6.187",
             "user": "root",
             "password": "mysql",
             "database": "mine"
@@ -137,13 +137,13 @@ class MyProxy():
 
     def to_db(self, data_list):
         for data in data_list:
-            print(data)
-            data_obj = json.loads(data)
+            data_obj = data
             if data_obj:
                 params = list(data_obj.values())
                 # params = [ip_port, ip_area, socket_type, sped, link_sped, validity, validate]
                 self.cursor.execute(
                     "insert ignore into proxy(ip_port, ip_area, socket_type, sped, link_sped, validity, validate) values(%s, %s, %s, %s, %s, %s, %s)", params)
+
                 self.db.commit()
 
     def __del__(self):
