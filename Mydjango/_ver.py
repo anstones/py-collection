@@ -8,3 +8,6 @@ print(ver)
 
 env = os.getenv('HOME')
 print(env)
+
+a = [l for l in sys.argv]
+print(a)
