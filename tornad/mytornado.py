@@ -8,6 +8,7 @@ import tornado.concurrent
 import tornado.ioloop
 
 import time
+import json
 
 from tornado.options import define, options
 
@@ -25,7 +26,10 @@ class SleepHandler(tornado.web.RequestHandler):
 
 class JustNowHandler(tornado.web.RequestHandler):
     def get(self):
+        ip = self.request.remote_ip
+        print("client ip is %s"%ip)
         self.write("i hope just now see you")
+        # self.write("i hope just now see you %r", params)
 
 
 def run(self):

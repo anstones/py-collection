@@ -16,33 +16,12 @@ class PublishSerializers(serializers.Serializer):
     email = serializers.CharField()
 
 
-# class PublishView(APIView):
-#
-#     def get(self, request):
-#         publish_list = Publish.objects.all()
-#
-#         # 方式一：Django序列化组件
-#         # ret=serialize("json",publish_list)
-#
-#         # 方式二：REST序列化组件
-#         # 调用PublishSerializers组件把publish_list序列化
-#         # 这个组件不仅可以序列化QuerySet，也可以序列化一个model对象
-#         # 默认many=Flase 序列化model对象，many=True序列化QuerySet
-#         ps = PublishSerializers(publish_list, many=True)
-#         # 序列化完成的数据
-#         data = ps.data
-#         return HttpResponse(data)
-#
-#     def post(self, request):
-#         pass
-
-
-
 class PublishView(APIView):
 
     def get(self,request):
-        publish_list=Publish.objects.all()
-
+        publish_list = Publish.objects.all()
+        ip = request.META["REMOTE_ADDR"]
+        print("client ip is %s"%ip)
         # 方式一：Django序列化组件
         # ret=serialize("json",publish_list)
 
@@ -50,7 +29,7 @@ class PublishView(APIView):
         # 调用PublishSerializers组件把publish_list序列化
         # 这个组件不仅可以序列化QuerySet，也可以序列化一个model对象
         # 默认many=Flase 序列化model对象，many=True序列化QuerySet
-        ps=PublishSerializers(publish_list,many=True )
+        ps=PublishSerializers(publish_list, many=True)
         # 序列化完成的数据
         # ps.data
         return Response(ps.data)

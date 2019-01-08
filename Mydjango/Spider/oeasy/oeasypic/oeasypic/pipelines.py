@@ -5,10 +5,12 @@
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 from scrapy.pipelines.images import ImagesPipeline
-from scrapy.utils.project import get_project_settings
+from scrapy.utils.project import get_project_settings, data_path, project_data_dir
 import scrapy
 import os
 import json
+
+print(project_data_dir())
 
 
 class OeasypicPipeline(object):
