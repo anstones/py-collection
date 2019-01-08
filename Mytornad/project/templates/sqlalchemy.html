@@ -1,0 +1,13 @@
+{% extends "./base.html" %}
+{% block title %}
+用户中心 - 用户管理
+{% end %}}
+ 
+{% block body%}
+{% if username!='no' %}
+ 登录成功：欢迎 {{ username }} 回来。<br>点击<a href="/">退出登录</a>
+{% else %}
+您还没有
+<a href="/login">登录</a>，或进行<a href="/register">新用户注册</a>
+{%end%}
+{%end%}

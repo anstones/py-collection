@@ -1,0 +1,50 @@
+2019-01-08 14:31:21,559 [Dummy-1:6768] [django.db.backends:90] [DEBUG]- (0.220) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-08 14:31:21,624 [Dummy-1:6768] [django.db.backends:90] [DEBUG]- (0.064) SELECT VERSION(); args=None
+2019-01-08 14:31:28,430 [Dummy-1:6768] [django.db.backends:90] [DEBUG]- (0.175) SHOW FULL TABLES; args=None
+2019-01-08 14:31:28,593 [Dummy-1:6768] [django.db.backends:90] [DEBUG]- (0.105) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-08 14:32:11,986 [Thread-2:4724] [django:26] [DEBUG]- request ip '127.0.0.1'
+2019-01-08 14:32:12,182 [Thread-2:4724] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-08 14:32:12,264 [Thread-2:4724] [django.db.backends:90] [DEBUG]- (0.081) SELECT `app1_publish`.`nid`, `app1_publish`.`name`, `app1_publish`.`city`, `app1_publish`.`email` FROM `app1_publish`; args=()
+2019-01-08 14:32:13,924 [Thread-2:4724] [django.server:124] [INFO]- "GET /app1/publishes HTTP/1.1" 200 11450
+2019-01-08 14:32:37,805 [Thread-4:4784] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app1.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\app1\\urls.py'> (None:None) ^app1/>, <RegexURLPattern None ^publishes>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/$>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/(?P<pk>[0-9]+)/$>]], 'path': 'app1/publishe'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2019-01-08 14:32:37,905 [Thread-4:4784] [django.server:124] [WARNING]- "GET /app1/publishe HTTP/1.1" 404 2474
+2019-01-08 14:32:58,966 [Thread-6:9260] [django:26] [DEBUG]- request ip '127.0.0.1'
+2019-01-08 14:32:59,000 [Thread-6:9260] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-08 14:32:59,001 [Thread-6:9260] [django.db.backends:90] [DEBUG]- (0.001) SELECT `app1_publish`.`nid`, `app1_publish`.`name`, `app1_publish`.`city`, `app1_publish`.`email` FROM `app1_publish`; args=()
+2019-01-08 14:32:59,022 [Thread-6:9260] [django.server:124] [INFO]- "GET /app1/publishes HTTP/1.1" 200 11450

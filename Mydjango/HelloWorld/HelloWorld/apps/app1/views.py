@@ -3,7 +3,9 @@ from .models import Publish
 from rest_framework.views import APIView
 from rest_framework import serializers
 from rest_framework.response import Response
+import logging
 
+logger = logging.getLogger('django')
 
 class PublishSerializers(serializers.Serializer):
     '''
@@ -21,7 +23,7 @@ class PublishView(APIView):
     def get(self,request):
         publish_list = Publish.objects.all()
         ip = request.META["REMOTE_ADDR"]
-        print("client ip is %s"%ip)
+        logger.debug("request ip %r", ip)
         # 方式一：Django序列化组件
         # ret=serialize("json",publish_list)
 

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录 - 用户管理</title>
+</head>
+<body>
+登录
+<br>如果没有账号，请点击<a href="/register">注册</a> <br>
+<p>
+<form method="post" action="/login">
+账号：<input type="text" name="name"><br>
+密码：<input type="password" name="password">
+<input type="submit"><br></p>
+    {%if error%}
+提示：{{error}}
+{%end%}
+</form>
+</body>
+</html>

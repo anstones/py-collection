@@ -4,7 +4,9 @@ from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
 from snippets.models import Snippet
 from snippets.serializers import SnippetSerializer
+import logging
 
+logger = logging.getLogger('django')
 
 class JSONResponse(HttpResponse):
     """
@@ -22,6 +24,8 @@ def snippet_list(request):
     """
     列出所有的实例，或创建一个新的实例.
     """
+    ip = request.META["REMOTE_ADDR"]
+    logger.debug("request ip %r", ip)
     if request.method == 'GET':
         snippets = Snippet.objects.all()
         serializer = SnippetSerializer(snippets, many=True)

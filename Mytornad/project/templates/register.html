@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册 - 用户管理</title>
+</head>
+<body>注册新账号<br>如果有账号，请点击<a href="/login">登录</a> <br>
+<p>
+<form method="post" action="/register">
+登录账号：<input type="text" name="name">
+    {%if error%}字数4位至10位{%end%}<br>
+输入密码：<input type="password" name="password1">
+    {%if error%}字数6位至10位{%end%}<br>
+确认密码：<input type="password" name="password2">
+<input type="submit">
+</form></p>
+{%if error%}
+提示：提交失败，{{error}}
+{%end%}
+</body>
+</html>

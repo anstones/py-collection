@@ -1,8 +1,0 @@
-syntax = "proto3";
-package example;
-service FormatData {
-  rpc DoFormat(Data) returns (Data){}
-}
-message Data {
-  string text = 1;
-}
