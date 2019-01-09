@@ -10,6 +10,6 @@ for a in range(101):
     b = 100 -a
     #print b
     #sys.stdout.write(("\r[%s%s]%0.2f%%" %("#"*a,b*"",float(a))))
-    sys.stdout.write(("\r[%s%s]%0.2f%%"%("#"*a,b*" ",float(a))))
+    sys.stdout.write(("\r[%s%s]%0.2f%%"%("|"*a,b*" ",float(a))))
     sys.stdout.flush()
     time.sleep(0.1)

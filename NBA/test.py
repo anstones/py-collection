@@ -15,7 +15,7 @@ team_stats = {}
 X = []
 y = []
 # 存放数据的目录
-folder = 'data'
+folder = 'data/18-19'
 
 
 # 根据每支队伍的Miscellaneous Opponent，Team统计数据csv文件进行初始化
@@ -137,7 +137,6 @@ if __name__ == '__main__':
     Tstat = pd.read_csv(folder + '/17-18Team Per Game Stats.csv')
 
     team_stats = initialize_data(Mstat, Ostat, Tstat)
-
     result_data = pd.read_csv(folder + '/17-18result.csv')
     X, y = build_dataSet(result_data)
 
@@ -168,7 +167,7 @@ if __name__ == '__main__':
             loser = team1
             result.append([winner, loser, 1 - prob])
 
-    with open('16-17Result.csv', 'w') as f:
+    with open('18-19Result.csv', 'w') as f:
         writer = csv.writer(f)
         writer.writerow(['win', 'lose', 'probability'])
         writer.writerows(result)
