@@ -18,7 +18,7 @@ class FormatData(data_pb2_grpc.FormatDataServicer):
 def serve():
     grpcServer = grpc.server(futures.ThreadPoolExecutor(max_workers=4))
     data_pb2_grpc.add_FormatDataServicer_to_server(FormatData(), grpcServer)
-    grpcServer.add_insecure_port(_HOST + ':' + _HOST)
+    grpcServer.add_insecure_port(_HOST + ':' + _PORT)
     grpcServer.start()
     try:
         while True:
