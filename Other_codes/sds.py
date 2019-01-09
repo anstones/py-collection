@@ -1,3 +1,9 @@
+#!/usr/bin/env python
+# -*- encoding: utf-8 -*-
+"""
+圣诞树
+"""
+
 from turtle import *
 import random
 import time

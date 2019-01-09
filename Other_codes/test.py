@@ -1,5 +1,10 @@
-import time
+#!/usr/bin/env python
+# -*- encoding: utf-8 -*-
+"""
+数字生成图片验证码
+"""
 
+import time
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 from skimage import transform as tf

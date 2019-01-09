@@ -1,3 +1,9 @@
+#!/usr/bin/env python
+# -*- encoding: utf-8 -*-
+"""
+python 圣诞树
+"""
+
 import turtle
 screen = turtle.Screen()
 screen.setup(800,600)
