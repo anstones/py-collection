@@ -1,0 +1,5 @@
+#####
+tflearn−0.3.2tflearn−0.3.2  
+tensorflow−1.4.1tensorflow−1.4.1 
+scikit_image−0.13.1scikit_image−0.13.1
+librosa−0.5.1librosa−0.5.1
