@@ -1,0 +1,770 @@
+2019-01-10 09:50:50,833 [Dummy-1:1656] [django.db.backends:90] [DEBUG]- (0.022) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 09:50:50,835 [Dummy-1:1656] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-01-10 09:50:59,467 [Dummy-1:1656] [django.db.backends:90] [DEBUG]- (0.333) SHOW FULL TABLES; args=None
+2019-01-10 09:50:59,818 [Dummy-1:1656] [django.db.backends:90] [DEBUG]- (0.279) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 09:52:34,761 [Dummy-1:4008] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 09:52:34,762 [Dummy-1:4008] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-01-10 09:52:38,424 [Dummy-1:4008] [django.db.backends:90] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2019-01-10 09:52:38,446 [Dummy-1:4008] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 10:11:20,290 [Dummy-1:1076] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:11:20,301 [Dummy-1:1076] [django.db.backends:90] [DEBUG]- (0.002) SELECT VERSION(); args=None
+2019-01-10 10:11:24,520 [Dummy-1:1076] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-01-10 10:11:24,545 [Dummy-1:1076] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 10:12:24,689 [Dummy-1:1628] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:12:24,690 [Dummy-1:1628] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 10:12:50,431 [Dummy-1:6332] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:12:50,432 [Dummy-1:6332] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 10:23:32,518 [Dummy-1:4172] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:23:32,519 [Dummy-1:4172] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 10:25:00,911 [Dummy-1:8284] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:25:00,911 [Dummy-1:8284] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 10:28:26,738 [MainThread:5216] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:28:26,739 [MainThread:5216] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-01-10 10:28:42,785 [Dummy-1:920] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:28:42,786 [Dummy-1:920] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 10:29:10,925 [Dummy-1:5384] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:29:10,925 [Dummy-1:5384] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 10:29:13,585 [MainThread:4776] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:29:13,586 [MainThread:4776] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-01-10 10:29:15,077 [MainThread:4776] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-01-10 10:29:15,087 [Dummy-1:5384] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-01-10 10:29:15,097 [MainThread:4776] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 10:29:15,097 [Dummy-1:5384] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 10:29:30,491 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:29:30,491 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@sql_mode; args=None
+2019-01-10 10:29:30,492 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 10:29:31,096 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-01-10 10:29:31,099 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 10:29:31,100 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-01-10 10:29:31,101 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 10:29:31,112 [MainThread:2960] [django.db.backends.schema:111] [DEBUG]- CREATE TABLE `book_bookinfo` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `btitle` varchar(20) NOT NULL, `bpub_date` date NULL, `bread` integer NOT NULL, `bcomment` integer NOT NULL, `image` varchar(100) NULL); (params None)
+2019-01-10 10:29:31,123 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.011) CREATE TABLE `book_bookinfo` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `btitle` varchar(20) NOT NULL, `bpub_date` date NULL, `bread` integer NOT NULL, `bcomment` integer NOT NULL, `image` varchar(100) NULL); args=None
+2019-01-10 10:29:31,147 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.023) SELECT engine FROM information_schema.tables WHERE table_name = 'book_bookinfo'; args=['book_bookinfo']
+2019-01-10 10:29:31,147 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.000) SELECT engine FROM information_schema.tables WHERE table_name = 'book_bookinfo'; args=['book_bookinfo']
+2019-01-10 10:29:31,148 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.000) SELECT engine FROM information_schema.tables WHERE table_name = 'book_bookinfo'; args=['book_bookinfo']
+2019-01-10 10:29:31,149 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'book_bookinfo'; args=['book_bookinfo']
+2019-01-10 10:29:31,149 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.000) SELECT engine FROM information_schema.tables WHERE table_name = 'book_bookinfo'; args=['book_bookinfo']
+2019-01-10 10:29:31,150 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.000) SELECT engine FROM information_schema.tables WHERE table_name = 'book_bookinfo'; args=['book_bookinfo']
+2019-01-10 10:29:31,151 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-01-10 10:29:31,163 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.010) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('book', '0001_initial', '2019-01-10 02:29:31.151705'); args=['book', '0001_initial', '2019-01-10 02:29:31.151705']
+2019-01-10 10:29:31,172 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.002) SHOW FULL TABLES; args=None
+2019-01-10 10:29:31,174 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 10:29:31,176 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'admin' AND `django_content_type`.`model` = 'logentry'); args=('admin', 'logentry')
+2019-01-10 10:29:31,179 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.001) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (1) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(1,)
+2019-01-10 10:29:31,180 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'admin'; args=('admin',)
+2019-01-10 10:29:31,181 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'permission'); args=('auth', 'permission')
+2019-01-10 10:29:31,182 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'group'); args=('auth', 'group')
+2019-01-10 10:29:31,183 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'user'); args=('auth', 'user')
+2019-01-10 10:29:31,189 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.005) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (2, 3, 4) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(2, 3, 4)
+2019-01-10 10:29:31,191 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'auth'; args=('auth',)
+2019-01-10 10:29:31,192 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'contenttypes' AND `django_content_type`.`model` = 'contenttype'); args=('contenttypes', 'contenttype')
+2019-01-10 10:29:31,194 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.001) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (5) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(5,)
+2019-01-10 10:29:31,195 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'contenttypes'; args=('contenttypes',)
+2019-01-10 10:29:31,197 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'sessions' AND `django_content_type`.`model` = 'session'); args=('sessions', 'session')
+2019-01-10 10:29:31,201 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.002) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (6) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(6,)
+2019-01-10 10:29:31,204 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.002) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'sessions'; args=('sessions',)
+2019-01-10 10:29:31,206 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'book' AND `django_content_type`.`model` = 'bookinfo'); args=('book', 'bookinfo')
+2019-01-10 10:29:31,207 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'book' AND `django_content_type`.`model` = 'bookinfo'); args=('book', 'bookinfo')
+2019-01-10 10:29:31,209 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.000) INSERT INTO `django_content_type` (`app_label`, `model`) VALUES ('book', 'bookinfo'); args=['book', 'bookinfo']
+2019-01-10 10:29:31,212 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (9) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(9,)
+2019-01-10 10:29:31,213 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.000) INSERT INTO `auth_permission` (`name`, `content_type_id`, `codename`) VALUES ('Can add book info', 9, 'add_bookinfo'), ('Can change book info', 9, 'change_bookinfo'), ('Can delete book info', 9, 'delete_bookinfo'); args=('Can add book info', 9, 'add_bookinfo', 'Can change book info', 9, 'change_bookinfo', 'Can delete book info', 9, 'delete_bookinfo')
+2019-01-10 10:29:31,217 [MainThread:2960] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'book'; args=('book',)
+2019-01-10 10:32:41,390 [Thread-2:2516] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>]], 'path': 'app1/publishes'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2019-01-10 10:32:41,513 [Thread-2:2516] [django.request:152] [WARNING]- Not Found: /app1/publishes
+2019-01-10 10:32:41,513 [Thread-2:2516] [django.server:124] [WARNING]- "GET /app1/publishes HTTP/1.1" 404 1973
+2019-01-10 10:32:48,036 [Thread-3:5188] [django.server:124] [INFO]- "GET / HTTP/1.1" 200 1716
+2019-01-10 10:32:53,883 [Thread-4:4272] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>]], 'path': 'books'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2019-01-10 10:32:53,884 [Thread-4:4272] [django.request:152] [WARNING]- Not Found: /books
+2019-01-10 10:32:53,885 [Thread-4:4272] [django.server:124] [WARNING]- "GET /books HTTP/1.1" 404 1946
+2019-01-10 10:33:19,211 [Thread-6:5216] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>]], 'path': 'books/'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2019-01-10 10:33:19,212 [Thread-6:5216] [django.request:152] [WARNING]- Not Found: /books/
+2019-01-10 10:33:19,213 [Thread-6:5216] [django.server:124] [WARNING]- "GET /books/ HTTP/1.1" 404 1949
+2019-01-10 10:34:08,993 [Dummy-1:2396] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:34:08,994 [Dummy-1:2396] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-01-10 10:34:12,417 [Dummy-1:1096] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:34:12,418 [Dummy-1:1096] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-01-10 10:34:35,958 [Dummy-1:4064] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:34:35,959 [Dummy-1:4064] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 10:34:36,457 [Dummy-1:4064] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-01-10 10:34:36,460 [Dummy-1:4064] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 10:34:41,948 [Thread-2:8132] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:34:41,950 [Thread-2:8132] [django.db.backends:90] [DEBUG]- (0.001) SELECT `book_bookinfo`.`id`, `book_bookinfo`.`btitle`, `book_bookinfo`.`bpub_date`, `book_bookinfo`.`bread`, `book_bookinfo`.`bcomment`, `book_bookinfo`.`image` FROM `book_bookinfo`; args=()
+2019-01-10 10:34:41,951 [Thread-2:8132] [django.server:124] [INFO]- "GET /books/ HTTP/1.1" 200 2
+2019-01-10 10:37:48,829 [Thread-4:8068] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:37:48,831 [Thread-4:8068] [django.db.backends:90] [DEBUG]- (0.001) SELECT `book_bookinfo`.`id`, `book_bookinfo`.`btitle`, `book_bookinfo`.`bpub_date`, `book_bookinfo`.`bread`, `book_bookinfo`.`bcomment`, `book_bookinfo`.`image` FROM `book_bookinfo`; args=()
+2019-01-10 10:37:48,832 [Thread-4:8068] [django.server:124] [INFO]- "GET /books/ HTTP/1.1" 200 2
+2019-01-10 10:38:10,076 [Thread-5:4748] [django.security.csrf:160] [WARNING]- Forbidden (CSRF cookie not set.): /books/100/
+2019-01-10 10:38:10,255 [Thread-5:4748] [django.server:124] [WARNING]- "POST /books/100/ HTTP/1.1" 403 2857
+2019-01-10 10:38:24,530 [Thread-6:5900] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:38:24,531 [Thread-6:5900] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 10:38:24,538 [Thread-6:5900] [django.db.backends:90] [DEBUG]- (0.001) SELECT `book_bookinfo`.`id`, `book_bookinfo`.`btitle`, `book_bookinfo`.`bpub_date`, `book_bookinfo`.`bread`, `book_bookinfo`.`bcomment`, `book_bookinfo`.`image` FROM `book_bookinfo` WHERE `book_bookinfo`.`id` = 100; args=(100,)
+2019-01-10 10:38:24,538 [Thread-6:5900] [django.request:152] [WARNING]- Not Found: /books/100/
+2019-01-10 10:38:24,539 [Thread-6:5900] [django.server:124] [WARNING]- "GET /books/100/ HTTP/1.1" 404 0
+2019-01-10 10:38:32,387 [Thread-7:2780] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:38:32,387 [Thread-7:2780] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 10:38:32,390 [Thread-7:2780] [django.db.backends:90] [DEBUG]- (0.001) SELECT `book_bookinfo`.`id`, `book_bookinfo`.`btitle`, `book_bookinfo`.`bpub_date`, `book_bookinfo`.`bread`, `book_bookinfo`.`bcomment`, `book_bookinfo`.`image` FROM `book_bookinfo` WHERE `book_bookinfo`.`id` = 10; args=(10,)
+2019-01-10 10:38:32,390 [Thread-7:2780] [django.request:152] [WARNING]- Not Found: /books/10/
+2019-01-10 10:38:32,391 [Thread-7:2780] [django.server:124] [WARNING]- "GET /books/10/ HTTP/1.1" 404 0
+2019-01-10 10:39:07,808 [Thread-8:3528] [django.security.csrf:160] [WARNING]- Forbidden (CSRF cookie not set.): /books/
+2019-01-10 10:39:07,810 [Thread-8:3528] [django.server:124] [WARNING]- "POST /books/ HTTP/1.1" 403 2857
+2019-01-10 10:39:59,109 [Dummy-1:8216] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:39:59,111 [Dummy-1:8216] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-01-10 10:40:02,891 [Dummy-1:8216] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-01-10 10:40:02,919 [Dummy-1:8216] [django.db.backends:90] [DEBUG]- (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 10:40:05,783 [Thread-2:6396] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:40:05,785 [Thread-2:6396] [django.db.backends:90] [DEBUG]- (0.001) INSERT INTO `book_bookinfo` (`btitle`, `bpub_date`, `bread`, `bcomment`, `image`) VALUES ('三国演义', '1990-02-03', 0, 0, ''); args=['三国演义', '1990-02-03', 0, 0, '']
+2019-01-10 10:40:05,799 [Thread-2:6396] [django.server:124] [INFO]- "POST /books/ HTTP/1.1" 201 114
+2019-01-10 10:40:46,413 [Dummy-1:7012] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:40:46,414 [Dummy-1:7012] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 10:40:46,897 [Dummy-1:7012] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-01-10 10:40:46,900 [Dummy-1:7012] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 10:41:27,752 [Thread-2:3428] [django.request:93] [WARNING]- Method Not Allowed (POST): /books/1/
+2019-01-10 10:41:27,752 [Thread-2:3428] [django.server:124] [WARNING]- "POST /books/1/ HTTP/1.1" 405 0
+2019-01-10 10:41:33,548 [Thread-3:6748] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:41:33,548 [Thread-3:6748] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 10:41:33,561 [Thread-3:6748] [django.db.backends:90] [DEBUG]- (0.000) SELECT `book_bookinfo`.`id`, `book_bookinfo`.`btitle`, `book_bookinfo`.`bpub_date`, `book_bookinfo`.`bread`, `book_bookinfo`.`bcomment`, `book_bookinfo`.`image` FROM `book_bookinfo` WHERE `book_bookinfo`.`id` = 1; args=(1,)
+2019-01-10 10:41:33,562 [Thread-3:6748] [django.server:124] [INFO]- "GET /books/1/ HTTP/1.1" 200 114
+2019-01-10 10:41:58,174 [Thread-4:4084] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:41:58,174 [Thread-4:4084] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 10:41:58,178 [Thread-4:4084] [django.db.backends:90] [DEBUG]- (0.000) SELECT `book_bookinfo`.`id`, `book_bookinfo`.`btitle`, `book_bookinfo`.`bpub_date`, `book_bookinfo`.`bread`, `book_bookinfo`.`bcomment`, `book_bookinfo`.`image` FROM `book_bookinfo` WHERE `book_bookinfo`.`id` = 1; args=(1,)
+2019-01-10 10:41:58,183 [Thread-4:4084] [django.db.backends:90] [DEBUG]- (0.002) UPDATE `book_bookinfo` SET `btitle` = '三国演义（第二版）', `bpub_date` = '1990-02-03', `bread` = 0, `bcomment` = 0, `image` = '' WHERE `book_bookinfo`.`id` = 1; args=('三国演义（第二版）', '1990-02-03', 0, 0, '', 1)
+2019-01-10 10:41:58,247 [Thread-4:4084] [django.server:124] [INFO]- "PUT /books/1/ HTTP/1.1" 200 144
+2019-01-10 10:42:26,593 [Thread-5:716] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:42:26,594 [Thread-5:716] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 10:42:26,608 [Thread-5:716] [django.db.backends:90] [DEBUG]- (0.001) SELECT `book_bookinfo`.`id`, `book_bookinfo`.`btitle`, `book_bookinfo`.`bpub_date`, `book_bookinfo`.`bread`, `book_bookinfo`.`bcomment`, `book_bookinfo`.`image` FROM `book_bookinfo` WHERE `book_bookinfo`.`id` = 2; args=(2,)
+2019-01-10 10:42:26,608 [Thread-5:716] [django.request:152] [WARNING]- Not Found: /books/2/
+2019-01-10 10:42:26,609 [Thread-5:716] [django.server:124] [WARNING]- "PUT /books/2/ HTTP/1.1" 404 0
+2019-01-10 10:42:33,633 [Thread-6:1380] [django.request:93] [WARNING]- Method Not Allowed (POST): /books/2/
+2019-01-10 10:42:33,633 [Thread-6:1380] [django.server:124] [WARNING]- "POST /books/2/ HTTP/1.1" 405 0
+2019-01-10 10:42:44,936 [Thread-7:4496] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:42:44,937 [Thread-7:4496] [django.db.backends:90] [DEBUG]- (0.000) INSERT INTO `book_bookinfo` (`btitle`, `bpub_date`, `bread`, `bcomment`, `image`) VALUES ('水浒传', '1990-02-03', 0, 0, ''); args=['水浒传', '1990-02-03', 0, 0, '']
+2019-01-10 10:42:44,979 [Thread-7:4496] [django.server:124] [INFO]- "POST /books/ HTTP/1.1" 201 108
+2019-01-10 10:42:50,236 [Thread-8:6500] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:42:50,237 [Thread-8:6500] [django.db.backends:90] [DEBUG]- (0.000) SELECT `book_bookinfo`.`id`, `book_bookinfo`.`btitle`, `book_bookinfo`.`bpub_date`, `book_bookinfo`.`bread`, `book_bookinfo`.`bcomment`, `book_bookinfo`.`image` FROM `book_bookinfo`; args=()
+2019-01-10 10:42:50,237 [Thread-8:6500] [django.server:124] [INFO]- "GET /books/ HTTP/1.1" 200 256
+2019-01-10 10:43:04,059 [Thread-9:5456] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:43:04,060 [Thread-9:5456] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-01-10 10:43:04,063 [Thread-9:5456] [django.db.backends:90] [DEBUG]- (0.001) SELECT `book_bookinfo`.`id`, `book_bookinfo`.`btitle`, `book_bookinfo`.`bpub_date`, `book_bookinfo`.`bread`, `book_bookinfo`.`bcomment`, `book_bookinfo`.`image` FROM `book_bookinfo` WHERE `book_bookinfo`.`id` = 1; args=(1,)
+2019-01-10 10:43:04,065 [Thread-9:5456] [django.db.backends:90] [DEBUG]- (0.001) DELETE FROM `book_bookinfo` WHERE `book_bookinfo`.`id` IN (1); args=(1,)
+2019-01-10 10:43:04,425 [Thread-9:5456] [django.server:124] [INFO]- "DELETE /books/1/ HTTP/1.1" 204 0
+2019-01-10 10:43:10,084 [Thread-10:6200] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:43:10,084 [Thread-10:6200] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 10:43:10,098 [Thread-10:6200] [django.db.backends:90] [DEBUG]- (0.001) SELECT `book_bookinfo`.`id`, `book_bookinfo`.`btitle`, `book_bookinfo`.`bpub_date`, `book_bookinfo`.`bread`, `book_bookinfo`.`bcomment`, `book_bookinfo`.`image` FROM `book_bookinfo` WHERE `book_bookinfo`.`id` = 1; args=(1,)
+2019-01-10 10:43:10,098 [Thread-10:6200] [django.request:152] [WARNING]- Not Found: /books/1/
+2019-01-10 10:43:10,098 [Thread-10:6200] [django.server:124] [WARNING]- "GET /books/1/ HTTP/1.1" 404 0
+2019-01-10 10:43:13,918 [Thread-11:3312] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:43:13,924 [Thread-11:3312] [django.db.backends:90] [DEBUG]- (0.000) SELECT `book_bookinfo`.`id`, `book_bookinfo`.`btitle`, `book_bookinfo`.`bpub_date`, `book_bookinfo`.`bread`, `book_bookinfo`.`bcomment`, `book_bookinfo`.`image` FROM `book_bookinfo`; args=()
+2019-01-10 10:43:13,925 [Thread-11:3312] [django.server:124] [INFO]- "GET /books/ HTTP/1.1" 200 110
+2019-01-10 10:48:35,134 [Dummy-1:7128] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:48:35,134 [Dummy-1:7128] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 10:49:14,477 [Dummy-1:2672] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:49:14,478 [Dummy-1:2672] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 10:50:11,903 [Dummy-1:7340] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:50:11,904 [Dummy-1:7340] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-01-10 10:50:41,020 [Dummy-1:7264] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:50:41,021 [Dummy-1:7264] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-01-10 10:50:54,993 [Dummy-1:7208] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:50:54,994 [Dummy-1:7208] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 10:57:50,505 [Dummy-1:8748] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 10:57:50,506 [Dummy-1:8748] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 11:05:55,803 [Dummy-1:9652] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 11:05:55,804 [Dummy-1:9652] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 11:06:51,271 [Dummy-1:9368] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 11:06:51,272 [Dummy-1:9368] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-01-10 11:07:14,517 [Dummy-1:9616] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 11:07:14,517 [Dummy-1:9616] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 11:07:15,021 [Dummy-1:9616] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-01-10 11:07:15,024 [Dummy-1:9616] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 14:29:30,943 [MainThread:2964] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 14:29:30,965 [MainThread:2964] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-01-10 14:29:30,968 [MainThread:2964] [django.db.backends:90] [DEBUG]- (0.001) SELECT `book_bookinfo`.`id`, `book_bookinfo`.`btitle`, `book_bookinfo`.`bpub_date`, `book_bookinfo`.`bread`, `book_bookinfo`.`bcomment`, `book_bookinfo`.`image` FROM `book_bookinfo` WHERE `book_bookinfo`.`id` = 2; args=(2,)
+2019-01-10 14:37:01,676 [MainThread:2964] [django.db.backends:90] [DEBUG]- (0.001) SELECT `book_bookinfo`.`id`, `book_bookinfo`.`btitle`, `book_bookinfo`.`bpub_date`, `book_bookinfo`.`bread`, `book_bookinfo`.`bcomment`, `book_bookinfo`.`image` FROM `book_bookinfo`; args=()
+2019-01-10 15:40:07,490 [MainThread:8964] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 15:40:07,491 [MainThread:8964] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-01-10 15:40:07,493 [MainThread:8964] [django.db.backends:90] [DEBUG]- (0.000) SELECT `book_bookinfo`.`id`, `book_bookinfo`.`btitle`, `book_bookinfo`.`bpub_date`, `book_bookinfo`.`bread`, `book_bookinfo`.`bcomment`, `book_bookinfo`.`image` FROM `book_bookinfo` WHERE `book_bookinfo`.`id` = 2; args=(2,)
+2019-01-10 16:36:21,004 [Dummy-1:10996] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 16:36:21,005 [Dummy-1:10996] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-01-10 16:36:21,920 [Dummy-1:10996] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-01-10 16:36:21,922 [Dummy-1:10996] [django.db.backends:90] [DEBUG]- (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 16:36:47,269 [Thread-2:3832] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 16:36:47,270 [Thread-2:3832] [django.db.backends:90] [DEBUG]- (0.001) SELECT `book_bookinfo`.`id`, `book_bookinfo`.`btitle`, `book_bookinfo`.`bpub_date`, `book_bookinfo`.`bread`, `book_bookinfo`.`bcomment`, `book_bookinfo`.`image` FROM `book_bookinfo`; args=()
+2019-01-10 16:36:47,271 [Thread-2:3832] [django.request:135] [ERROR]- Internal Server Error: /books/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\fields.py", line 454, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\fields.py", line 102, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'BookInfo' object has no attribute 'hbook'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\mine\Project\project\BookInfo\BookInfo\app\book\views.py", line 152, in get
+    return Response(serializer.data)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\serializers.py", line 765, in data
+    ret = super(ListSerializer, self).data
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\serializers.py", line 683, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\serializers.py", line 683, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\serializers.py", line 514, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\fields.py", line 475, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `hbook` on serializer `BookInfoASerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `BookInfo` instance.
+Original exception text was: 'BookInfo' object has no attribute 'hbook'.
+2019-01-10 16:36:47,361 [Thread-2:3832] [django.server:124] [ERROR]- "GET /books/ HTTP/1.1" 500 132558
+2019-01-10 16:36:47,731 [Thread-3:5780] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'book.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\BookInfo\\BookInfo\\app\\book\\urls.py'> (None:None) ^>, <RegexURLPattern None ^books/$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2019-01-10 16:36:47,822 [Thread-3:5780] [django.request:152] [WARNING]- Not Found: /favicon.ico
+2019-01-10 16:36:47,822 [Thread-3:5780] [django.server:124] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 2120
+2019-01-10 16:37:04,620 [Dummy-1:10584] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 16:37:04,621 [Dummy-1:10584] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 16:37:05,193 [Dummy-1:10584] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-01-10 16:37:05,196 [Dummy-1:10584] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 16:37:09,107 [Thread-2:2480] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 16:37:09,108 [Thread-2:2480] [django.db.backends:90] [DEBUG]- (0.001) SELECT `book_bookinfo`.`id`, `book_bookinfo`.`btitle`, `book_bookinfo`.`bpub_date`, `book_bookinfo`.`bread`, `book_bookinfo`.`bcomment`, `book_bookinfo`.`image` FROM `book_bookinfo`; args=()
+2019-01-10 16:37:09,733 [Thread-2:2480] [django.server:124] [INFO]- "GET /books/ HTTP/1.1" 200 9631
+2019-01-10 16:37:09,870 [Thread-8:3512] [django.server:124] [INFO]- "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+2019-01-10 16:37:09,912 [Thread-5:5152] [django.server:124] [INFO]- "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+2019-01-10 16:37:09,914 [Thread-3:9108] [django.server:124] [INFO]- "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+2019-01-10 16:37:09,914 [Thread-6:5144] [django.server:124] [INFO]- "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+2019-01-10 16:37:09,915 [Thread-9:10832] [django.server:124] [INFO]- "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1735
+2019-01-10 16:37:09,918 [Thread-4:4484] [django.server:124] [INFO]- "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+2019-01-10 16:37:09,977 [Thread-12:8740] [django.server:124] [INFO]- "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+2019-01-10 16:37:09,978 [Thread-7:10248] [django.server:124] [INFO]- "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+2019-01-10 16:37:09,984 [Thread-13:3396] [django.server:124] [INFO]- "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+2019-01-10 16:37:09,993 [Thread-10:9428] [django.server:124] [INFO]- "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37045
+2019-01-10 16:37:10,059 [Thread-11:5556] [django.server:124] [INFO]- "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+2019-01-10 16:37:46,661 [Dummy-1:11012] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 16:37:46,663 [Dummy-1:11012] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-01-10 16:37:47,343 [Dummy-1:11012] [django.db.backends:90] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2019-01-10 16:37:47,346 [Dummy-1:11012] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 16:39:51,580 [Thread-2:1860] [django.server:124] [WARNING]- "PUT /books/ HTTP/1.1" 405 40
+2019-01-10 16:40:02,418 [Thread-3:4152] [django.server:124] [WARNING]- "POST /books/ HTTP/1.1" 405 41
+2019-01-10 16:44:58,632 [Dummy-1:7592] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 16:44:58,633 [Dummy-1:7592] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-01-10 16:46:29,825 [Dummy-1:9552] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 16:46:29,826 [Dummy-1:9552] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-01-10 16:46:30,415 [Dummy-1:9552] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-01-10 16:46:30,422 [Dummy-1:9552] [django.db.backends:90] [DEBUG]- (0.004) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 16:48:05,113 [Dummy-1:8944] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 16:48:05,114 [Dummy-1:8944] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-01-10 16:49:02,453 [Dummy-1:5552] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 16:49:02,454 [Dummy-1:5552] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 16:49:47,357 [Dummy-1:1304] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 16:49:47,358 [Dummy-1:1304] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 16:49:59,602 [Dummy-1:10788] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 16:49:59,603 [Dummy-1:10788] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 16:50:02,720 [Dummy-1:3896] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 16:50:02,721 [Dummy-1:3896] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-01-10 16:50:34,127 [Dummy-1:10180] [django.db.backends:90] [DEBUG]- (0.002) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 16:50:34,135 [Dummy-1:10180] [django.db.backends:90] [DEBUG]- (0.002) SELECT VERSION(); args=None
+2019-01-10 16:50:38,473 [Dummy-1:940] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 16:50:38,474 [Dummy-1:940] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-01-10 16:52:39,502 [Dummy-1:1412] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 16:52:39,503 [Dummy-1:1412] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-01-10 16:53:17,545 [Dummy-1:116] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 16:53:17,546 [Dummy-1:116] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 16:53:18,050 [Dummy-1:116] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-01-10 16:53:18,052 [Dummy-1:116] [django.db.backends:90] [DEBUG]- (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 16:53:44,198 [Dummy-1:8908] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 16:53:44,200 [Dummy-1:8908] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 16:53:44,760 [Dummy-1:8908] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-01-10 16:53:44,763 [Dummy-1:8908] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 16:53:54,759 [Dummy-1:8680] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 16:53:54,760 [Dummy-1:8680] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 16:53:55,330 [Dummy-1:8680] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-01-10 16:53:55,335 [Dummy-1:8680] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 16:54:30,683 [Dummy-1:6032] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 16:54:30,685 [Dummy-1:6032] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-01-10 16:54:31,243 [Dummy-1:6032] [django.db.backends:90] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2019-01-10 16:54:31,248 [Dummy-1:6032] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 16:54:51,630 [Dummy-1:1412] [django.db.backends:90] [DEBUG]- (0.002) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 16:54:51,632 [Dummy-1:1412] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-01-10 16:54:52,186 [Dummy-1:1412] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-01-10 16:54:52,189 [Dummy-1:1412] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 16:55:11,430 [Dummy-1:868] [django.db.backends:90] [DEBUG]- (0.004) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 16:55:11,433 [Dummy-1:868] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-01-10 16:55:12,049 [Dummy-1:868] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-01-10 16:55:12,052 [Dummy-1:868] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 16:55:47,259 [Dummy-1:428] [django.db.backends:90] [DEBUG]- (0.003) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 16:55:47,260 [Dummy-1:428] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-01-10 16:55:47,809 [Dummy-1:428] [django.db.backends:90] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2019-01-10 16:55:47,817 [Dummy-1:428] [django.db.backends:90] [DEBUG]- (0.004) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 16:55:55,484 [Dummy-1:7416] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 16:55:55,487 [Dummy-1:7416] [django.db.backends:90] [DEBUG]- (0.002) SELECT VERSION(); args=None
+2019-01-10 16:55:56,022 [Dummy-1:7416] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-01-10 16:55:56,025 [Dummy-1:7416] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 16:56:16,731 [Dummy-1:6216] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 16:56:16,732 [Dummy-1:6216] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 16:56:17,230 [Dummy-1:6216] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-01-10 16:56:17,233 [Dummy-1:6216] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 16:56:26,653 [Dummy-1:7316] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 16:56:26,658 [Dummy-1:7316] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 16:56:27,183 [Dummy-1:7316] [django.db.backends:90] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2019-01-10 16:56:27,186 [Dummy-1:7316] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 16:56:56,781 [Dummy-1:10600] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 16:56:56,782 [Dummy-1:10600] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-01-10 16:56:57,321 [Dummy-1:10600] [django.db.backends:90] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2019-01-10 16:56:57,324 [Dummy-1:10600] [django.db.backends:90] [DEBUG]- (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 16:58:36,370 [Dummy-1:10604] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 16:58:36,371 [Dummy-1:10604] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-01-10 16:58:36,868 [Dummy-1:10604] [django.db.backends:90] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2019-01-10 16:58:36,871 [Dummy-1:10604] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 16:58:48,130 [Dummy-1:5892] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 16:58:48,131 [Dummy-1:5892] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 16:59:05,904 [Dummy-1:1136] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 16:59:05,905 [Dummy-1:1136] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-01-10 16:59:06,420 [Dummy-1:1136] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-01-10 16:59:06,423 [Dummy-1:1136] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 16:59:11,974 [Thread-2:9064] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 16:59:11,975 [Thread-2:9064] [django.db.backends:90] [DEBUG]- (0.000) SELECT `book_bookinfo`.`id`, `book_bookinfo`.`btitle`, `book_bookinfo`.`bpub_date`, `book_bookinfo`.`bread`, `book_bookinfo`.`bcomment`, `book_bookinfo`.`image` FROM `book_bookinfo`; args=()
+2019-01-10 16:59:12,266 [Thread-2:9064] [django.server:124] [INFO]- "GET /books/ HTTP/1.1" 200 11267
+2019-01-10 16:59:19,750 [Thread-4:8240] [django.request:135] [ERROR]- Internal Server Error: /books/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\mine\Project\project\BookInfo\BookInfo\app\book\views.py", line 161, in post
+    data = json.loads(data)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\json\__init__.py", line 348, in loads
+    'not {!r}'.format(s.__class__.__name__))
+TypeError: the JSON object must be str, bytes or bytearray, not 'NoneType'
+2019-01-10 16:59:19,809 [Thread-4:8240] [django.server:124] [ERROR]- "POST /books/ HTTP/1.1" 500 16998
+2019-01-10 17:01:41,985 [Dummy-1:8900] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 17:01:41,986 [Dummy-1:8900] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 17:01:42,515 [Dummy-1:8900] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-01-10 17:01:42,518 [Dummy-1:8900] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 17:01:49,103 [Dummy-1:10676] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 17:01:49,104 [Dummy-1:10676] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-01-10 17:01:49,670 [Dummy-1:10676] [django.db.backends:90] [DEBUG]- (0.002) SHOW FULL TABLES; args=None
+2019-01-10 17:01:49,677 [Dummy-1:10676] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 17:02:12,641 [Dummy-1:5360] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 17:02:12,642 [Dummy-1:5360] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 17:02:13,310 [Dummy-1:5360] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-01-10 17:02:13,313 [Dummy-1:5360] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 17:02:20,031 [Thread-2:11116] [django.request:135] [ERROR]- Internal Server Error: /books/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\mine\Project\project\BookInfo\BookInfo\app\book\views.py", line 165, in post
+    serializer.save()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\serializers.py", line 209, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\serializers.py", line 983, in update
+    instance.save()
+TypeError: save() missing 1 required positional argument: 'self'
+2019-01-10 17:02:20,047 [Thread-2:11116] [django.server:124] [ERROR]- "POST /books/ HTTP/1.1" 500 17163
+2019-01-10 17:03:30,458 [Dummy-1:6652] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 17:03:30,459 [Dummy-1:6652] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 17:03:30,951 [Dummy-1:6652] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-01-10 17:03:30,954 [Dummy-1:6652] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 17:03:41,935 [Dummy-1:3880] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 17:03:41,936 [Dummy-1:3880] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 17:03:42,414 [Dummy-1:3880] [django.db.backends:90] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2019-01-10 17:03:42,417 [Dummy-1:3880] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 17:03:48,422 [Thread-2:4792] [django.request:135] [ERROR]- Internal Server Error: /books/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\mine\Project\project\BookInfo\BookInfo\app\book\views.py", line 165, in post
+    serializer.save(serializer.data)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\serializers.py", line 560, in data
+    ret = super(Serializer, self).data
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\serializers.py", line 527, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\fields.py", line 962, in to_representation
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'DeferredAttribute'
+2019-01-10 17:03:48,445 [Thread-2:4792] [django.server:124] [ERROR]- "POST /books/ HTTP/1.1" 500 17651
+2019-01-10 17:04:09,764 [Dummy-1:8896] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 17:04:09,765 [Dummy-1:8896] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-01-10 17:04:10,264 [Dummy-1:8896] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-01-10 17:04:10,267 [Dummy-1:8896] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 17:04:47,566 [Thread-2:5656] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 17:04:47,567 [Thread-2:5656] [django.db.backends:90] [DEBUG]- (0.000) SELECT `book_bookinfo`.`id`, `book_bookinfo`.`btitle`, `book_bookinfo`.`bpub_date`, `book_bookinfo`.`bread`, `book_bookinfo`.`bcomment`, `book_bookinfo`.`image` FROM `book_bookinfo`; args=()
+2019-01-10 17:04:47,622 [Thread-2:5656] [django.server:124] [INFO]- "GET /books/ HTTP/1.1" 200 11267
+2019-01-10 17:04:50,094 [Thread-3:8168] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 17:04:50,096 [Thread-3:8168] [django.db.backends:90] [DEBUG]- (0.002) SELECT `book_bookinfo`.`id`, `book_bookinfo`.`btitle`, `book_bookinfo`.`bpub_date`, `book_bookinfo`.`bread`, `book_bookinfo`.`bcomment`, `book_bookinfo`.`image` FROM `book_bookinfo`; args=()
+2019-01-10 17:04:50,111 [Thread-3:8168] [django.server:124] [INFO]- "GET /books/ HTTP/1.1" 200 11267
+2019-01-10 17:05:55,094 [Thread-5:6264] [django.request:135] [ERROR]- Internal Server Error: /books/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\mine\Project\project\BookInfo\BookInfo\app\book\views.py", line 165, in post
+    serializer.save()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\serializers.py", line 209, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\serializers.py", line 983, in update
+    instance.save()
+TypeError: save() missing 1 required positional argument: 'self'
+2019-01-10 17:05:55,199 [Thread-5:6264] [django.server:124] [ERROR]- "POST /books/ HTTP/1.1" 500 17162
+2019-01-10 17:08:53,592 [Dummy-1:5468] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 17:08:53,593 [Dummy-1:5468] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 17:08:58,037 [Dummy-1:5468] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-01-10 17:08:58,057 [Dummy-1:5468] [django.db.backends:90] [DEBUG]- (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 17:09:03,049 [Thread-2:2804] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 17:09:03,070 [Thread-2:2804] [django.db.backends:90] [DEBUG]- (0.020) INSERT INTO `book_bookinfo` (`btitle`, `bpub_date`, `bread`, `bcomment`, `image`) VALUES ('三国演义', '1990-02-03', 0, 0, ''); args=['三国演义', '1990-02-03', 0, 0, '']
+2019-01-10 17:09:03,100 [Thread-2:2804] [django.server:124] [INFO]- "POST /books/ HTTP/1.1" 200 93
+2019-01-10 17:09:29,016 [Thread-3:3268] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 17:09:29,017 [Thread-3:3268] [django.db.backends:90] [DEBUG]- (0.001) SELECT `book_bookinfo`.`id`, `book_bookinfo`.`btitle`, `book_bookinfo`.`bpub_date`, `book_bookinfo`.`bread`, `book_bookinfo`.`bcomment`, `book_bookinfo`.`image` FROM `book_bookinfo`; args=()
+2019-01-10 17:09:29,321 [Thread-3:3268] [django.server:124] [INFO]- "GET /books/ HTTP/1.1" 200 11431
+2019-01-10 17:09:31,831 [Thread-4:5600] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 17:09:31,832 [Thread-4:5600] [django.db.backends:90] [DEBUG]- (0.001) SELECT `book_bookinfo`.`id`, `book_bookinfo`.`btitle`, `book_bookinfo`.`bpub_date`, `book_bookinfo`.`bread`, `book_bookinfo`.`bcomment`, `book_bookinfo`.`image` FROM `book_bookinfo`; args=()
+2019-01-10 17:09:31,834 [Thread-4:5600] [django.server:124] [INFO]- "GET /books/?format=json HTTP/1.1" 200 186
+2019-01-10 17:11:26,553 [Thread-6:8808] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 17:11:26,554 [Thread-6:8808] [django.db.backends:90] [DEBUG]- (0.001) SELECT `book_bookinfo`.`id`, `book_bookinfo`.`btitle`, `book_bookinfo`.`bpub_date`, `book_bookinfo`.`bread`, `book_bookinfo`.`bcomment`, `book_bookinfo`.`image` FROM `book_bookinfo`; args=()
+2019-01-10 17:11:26,571 [Thread-6:8808] [django.server:124] [INFO]- "GET /books/ HTTP/1.1" 200 11431
+2019-01-10 17:11:30,957 [Thread-7:11072] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'book.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\BookInfo\\BookInfo\\app\\book\\urls.py'> (None:None) ^>, <RegexURLPattern None ^books/$>]], 'path': 'books/1/'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2019-01-10 17:11:31,050 [Thread-7:11072] [django.request:152] [WARNING]- Not Found: /books/1/
+2019-01-10 17:11:31,050 [Thread-7:11072] [django.server:124] [WARNING]- "GET /books/1/ HTTP/1.1" 404 2111
+2019-01-10 17:13:00,149 [Dummy-1:10460] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 17:13:00,150 [Dummy-1:10460] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 17:13:00,647 [Dummy-1:10460] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-01-10 17:13:00,650 [Dummy-1:10460] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 17:13:20,051 [Dummy-1:3772] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 17:13:20,055 [Dummy-1:3772] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-01-10 17:13:20,561 [Dummy-1:3772] [django.db.backends:90] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2019-01-10 17:13:20,564 [Dummy-1:3772] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 17:13:44,068 [Thread-2:10516] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 17:13:44,068 [Thread-2:10516] [django.db.backends:90] [DEBUG]- (0.000) SELECT `book_bookinfo`.`id`, `book_bookinfo`.`btitle`, `book_bookinfo`.`bpub_date`, `book_bookinfo`.`bread`, `book_bookinfo`.`bcomment`, `book_bookinfo`.`image` FROM `book_bookinfo`; args=()
+2019-01-10 17:13:44,118 [Thread-2:10516] [django.server:124] [INFO]- "GET /books/ HTTP/1.1" 200 11431
+2019-01-10 17:13:48,741 [Thread-3:6956] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 17:13:48,742 [Thread-3:6956] [django.db.backends:90] [DEBUG]- (0.000) SELECT `book_bookinfo`.`id`, `book_bookinfo`.`btitle`, `book_bookinfo`.`bpub_date`, `book_bookinfo`.`bread`, `book_bookinfo`.`bcomment`, `book_bookinfo`.`image` FROM `book_bookinfo`; args=()
+2019-01-10 17:13:48,757 [Thread-3:6956] [django.server:124] [INFO]- "GET /books/?format=api HTTP/1.1" 200 11486
+2019-01-10 17:13:51,941 [Thread-4:10900] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 17:13:51,942 [Thread-4:10900] [django.db.backends:90] [DEBUG]- (0.001) SELECT `book_bookinfo`.`id`, `book_bookinfo`.`btitle`, `book_bookinfo`.`bpub_date`, `book_bookinfo`.`bread`, `book_bookinfo`.`bcomment`, `book_bookinfo`.`image` FROM `book_bookinfo`; args=()
+2019-01-10 17:13:51,944 [Thread-4:10900] [django.server:124] [INFO]- "GET /books/?format=json HTTP/1.1" 200 186
+2019-01-10 17:13:55,922 [Thread-5:1776] [django.request:152] [WARNING]- Not Found: /books/
+2019-01-10 17:13:55,923 [Thread-5:1776] [django.server:124] [WARNING]- "GET /books/?format=1 HTTP/1.1" 404 23
+2019-01-10 17:14:01,546 [Thread-6:10760] [django.request:152] [WARNING]- Not Found: /books/
+2019-01-10 17:14:01,546 [Thread-6:10760] [django.server:124] [WARNING]- "GET /books/?format=2 HTTP/1.1" 404 23
+2019-01-10 17:14:04,603 [Thread-7:7876] [django.request:152] [WARNING]- Not Found: /books/
+2019-01-10 17:14:04,603 [Thread-7:7876] [django.server:124] [WARNING]- "GET /books/?format=3 HTTP/1.1" 404 23
+2019-01-10 17:14:09,352 [Thread-8:4276] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 17:14:09,354 [Thread-8:4276] [django.db.backends:90] [DEBUG]- (0.001) SELECT `book_bookinfo`.`id`, `book_bookinfo`.`btitle`, `book_bookinfo`.`bpub_date`, `book_bookinfo`.`bread`, `book_bookinfo`.`bcomment`, `book_bookinfo`.`image` FROM `book_bookinfo`; args=()
+2019-01-10 17:14:09,371 [Thread-8:4276] [django.server:124] [INFO]- "GET /books/ HTTP/1.1" 200 11431
+2019-01-10 17:15:29,282 [Dummy-1:8436] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 17:15:29,282 [Dummy-1:8436] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-01-10 17:15:29,772 [Dummy-1:8436] [django.db.backends:90] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2019-01-10 17:15:29,775 [Dummy-1:8436] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 17:16:01,417 [Thread-2:10788] [django.server:124] [WARNING]- "POST /books/ HTTP/1.1" 400 107
+2019-01-10 17:16:20,633 [Thread-3:5652] [django.server:124] [INFO]- "POST /books/ HTTP/1.1" 200 38
+2019-01-10 17:16:31,905 [Thread-4:9056] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 17:16:31,906 [Thread-4:9056] [django.db.backends:90] [DEBUG]- (0.001) SELECT `book_bookinfo`.`id`, `book_bookinfo`.`btitle`, `book_bookinfo`.`bpub_date`, `book_bookinfo`.`bread`, `book_bookinfo`.`bcomment`, `book_bookinfo`.`image` FROM `book_bookinfo`; args=()
+2019-01-10 17:16:31,954 [Thread-4:9056] [django.server:124] [INFO]- "GET /books/ HTTP/1.1" 200 11431
+2019-01-10 17:16:34,636 [Thread-5:2868] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 17:16:34,637 [Thread-5:2868] [django.db.backends:90] [DEBUG]- (0.000) SELECT `book_bookinfo`.`id`, `book_bookinfo`.`btitle`, `book_bookinfo`.`bpub_date`, `book_bookinfo`.`bread`, `book_bookinfo`.`bcomment`, `book_bookinfo`.`image` FROM `book_bookinfo`; args=()
+2019-01-10 17:16:34,653 [Thread-5:2868] [django.server:124] [INFO]- "GET /books/ HTTP/1.1" 200 11431
+2019-01-10 17:16:43,393 [Thread-7:8584] [django.server:124] [INFO]- "POST /books/ HTTP/1.1" 200 38
+2019-01-10 17:16:57,658 [Thread-8:120] [django.server:124] [WARNING]- "DELETE /books/ HTTP/1.1" 405 43
+2019-01-10 17:17:17,265 [Dummy-1:7096] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 17:17:17,267 [Dummy-1:7096] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-01-10 17:17:17,809 [Dummy-1:7096] [django.db.backends:90] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2019-01-10 17:17:17,816 [Dummy-1:7096] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-01-10 17:17:20,003 [Thread-2:5716] [django.request:135] [ERROR]- Internal Server Error: /books/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\mine\Project\project\BookInfo\BookInfo\app\book\views.py", line 172, in delete
+    book = BookInfo.objects.get(id=data)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1210, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1104, in build_lookup
+    return final_lookup(lhs, rhs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\lookups.py", line 74, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\fields\__init__.py", line 966, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'dict'
+2019-01-10 17:17:20,064 [Thread-2:5716] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-01-10 17:17:20,065 [Thread-2:5716] [django.db.backends:90] [DEBUG]- (0.000) SELECT `book_bookinfo`.`id`, `book_bookinfo`.`btitle`, `book_bookinfo`.`bpub_date`, `book_bookinfo`.`bread`, `book_bookinfo`.`bcomment`, `book_bookinfo`.`image` FROM `book_bookinfo` LIMIT 21; args=()
+2019-01-10 17:17:20,066 [Thread-2:5716] [django.db.backends:90] [DEBUG]- (0.000) SELECT `book_bookinfo`.`id`, `book_bookinfo`.`btitle`, `book_bookinfo`.`bpub_date`, `book_bookinfo`.`bread`, `book_bookinfo`.`bcomment`, `book_bookinfo`.`image` FROM `book_bookinfo` LIMIT 21; args=()
+2019-01-10 17:17:20,068 [Thread-2:5716] [django.db.backends:90] [DEBUG]- (0.001) SELECT `book_bookinfo`.`id`, `book_bookinfo`.`btitle`, `book_bookinfo`.`bpub_date`, `book_bookinfo`.`bread`, `book_bookinfo`.`bcomment`, `book_bookinfo`.`image` FROM `book_bookinfo` LIMIT 21; args=()
+2019-01-10 17:17:20,069 [Thread-2:5716] [django.db.backends:90] [DEBUG]- (0.001) SELECT `book_bookinfo`.`id`, `book_bookinfo`.`btitle`, `book_bookinfo`.`bpub_date`, `book_bookinfo`.`bread`, `book_bookinfo`.`bcomment`, `book_bookinfo`.`image` FROM `book_bookinfo` LIMIT 21; args=()
+2019-01-10 17:17:20,077 [Thread-2:5716] [django.server:124] [ERROR]- "DELETE /books/ HTTP/1.1" 500 18992
+2019-01-10 17:17:45,351 [Thread-3:216] [django.server:124] [WARNING]- "DELETE /books/ HTTP/1.1" 400 73
