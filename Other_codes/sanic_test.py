@@ -30,9 +30,11 @@
 
 from sanic import Sanic
 from sanic.response import json
+import asyncio
+import aiohttp
+import time
 
 app = Sanic(__name__)
-
 
 @app.route("/")
 async def test(request):
@@ -41,18 +43,25 @@ async def test(request):
 app.run(host="0.0.0.0", port=8000)
 
 
+async def to_baidu():
+    async with aiohttp.ClientSession() as session:
+        async with session.get('http://www.baidu.com') as resp:
+            if resp.status == 200:
+                res =  await resp.text()
+    return res
 
-import asyncio
-import time
-
-async def my_work():
+async def my_work(lp):
     print("开始执行任务")
-    time.sleep(5)
+    t = await to_baidu()
+    print(t)
     print("任务完成")
 
 loop = asyncio.get_event_loop()
+# future = asyncio.ensure_future(my_work(loop))
+
+print(my_work)
+
 try:
-    loop.run_until_complete(my_work())
+    loop.run_until_complete(my_work(loop))
 finally:
     loop.close()
-
