@@ -14,7 +14,7 @@ class HuxiuPipeline(object):
 
 class MysqlPipeline:
     def __init__(self):
-        self.conn = pymysql.connect(host='localhost',user='root', password='mysql', database='mine', )
+        self.conn = pymysql.connect(host='192.168.253.128',user='root', password='mysql', database='mine', )
         self.cursor = self.conn.cursor()
 
     def process_item(self, item, spider):
