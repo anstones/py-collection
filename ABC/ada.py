@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-
+'''
+装饰器装饰类中的方法时，可以用args实现类“self”的传递
+'''
 
 def recontent(func):
     def inner(*args, **kwargs):
