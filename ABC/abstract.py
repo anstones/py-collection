@@ -63,8 +63,11 @@ def large_order_promo(order):
 
 # 计算那种打折方案
 promos = [fidelity_promo, bulk_item_promo, large_order_promo]
+print(promos)
 
 def best_promo(order):
+    a = max(promo(order) for promo in promos)
+    print(a)
     return max(promo(order) for promo in promos) # 生成器表达式 简洁有力！
 
 joe = Customer('John Doe', 0)
