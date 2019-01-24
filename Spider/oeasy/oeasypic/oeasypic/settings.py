@@ -15,7 +15,7 @@ SPIDER_MODULES = ['oeasypic.spiders']
 NEWSPIDER_MODULE = 'oeasypic.spiders'
 
 # IMAGES_STORE = "/home/oeasy/Desktop/Mydjango/oeasy/images/"
-IMAGES_STORE = "/home/oeasy/Desktop/Mydjango/oeasy/img"
+IMAGES_STORE = r"C:\Users\Administrator\Desktop\mine\Project\project\Spider\oeasy\img"
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'oeasypic (+http://www.yourdomain.com)'
@@ -69,8 +69,8 @@ IMAGES_STORE = "/home/oeasy/Desktop/Mydjango/oeasy/img"
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'oeasypic.pipelines.DownloadsPipeline': 301,
-   'oeasypic.pipelines.OeasypicPipeline': 300,
+   'oeasypic.pipelines.DownloadsPipeline': 300,
+   # 'oeasypic.pipelines.OeasypicPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

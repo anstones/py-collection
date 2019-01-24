@@ -11,19 +11,29 @@ image_path = "/home/oeasy/Desktop/Mydjango/oeasy/images/"
 class OeasyPicSpider(scrapy.Spider):
     name = 'oeasy_pic'
     allowed_domains = ['0easy.com']
+    # http://bigdata.0easy.com/yihao01-bigdata-search/search/door/searchDoorRecord.do?&name=&start_time=&end_time=&door_id=&open_status=&open_door=&user_type=&unit_id=2033&pageSize=10&pageNo=1&_=1548307225112
     # start_urls = ["http://bigdata.0easy.com/yihao01-bigdata-search/search/door/searchDoorRecord.do"]
     start_urls = ['http://bigdata.0easy.com/yihao01-bigdata-search/search/door/searchDoorRecord.do']
+
     #
-    cookie = {'TOKEN': '3880650844fdbdf0e7a371d1ae05060e_3a8a7b67244d4f869a3f5fef9118b7f8', 'eid01': 'ymhmG1wTFIxUzwPcNXo1Ag==', 'JSESSIONID': 'A95A82A956D1E25779CAE6CEF71A05DF'}
+    cookie = {'TOKEN': '3880650844fdbdf0e7a371d1ae05060e_9effec756cfc435ea4f17e80eb905218', 
+    'eid01': 'ymhmG1wTFIxUzwPcNXo1Ag==', 
+    'UM_distinctid':'167ed842b2463d-01ee28c717a6b4-8383268-1fa400-167ed842b256a9',
+    'JSESSIONID': '9C4A98EEA9CE2F3CEE52AD41120A6356'}
     headers = {
         'Connection': 'keep - alive',  # 保持链接状态
         'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.82 Safari/537.36',
         # "Referer": "http://bigdata.0easy.com/yihao01-bigdata-search/community_entrance.jsp?unit_id=2033"
+
+        # JSESSIONID=9C4A98EEA9CE2F3CEE52AD41120A6356; 
+        # eid01=ymhmG1wTFIxUzwPcNXo1Ag==; 
+        # UM_distinctid=167ed842b2463d-01ee28c717a6b4-8383268-1fa400-167ed842b256a9; 
+        # TOKEN=3880650844fdbdf0e7a371d1ae05060e_9effec756cfc435ea4f17e80eb905218
     }
 
     def start_requests(self):
         url = self.start_urls[0]
-        for i in range(1,126750):
+        for i in range(1,51):
         # for i in range(1, 2):
             params = {
                 "unit_id": "2033",
