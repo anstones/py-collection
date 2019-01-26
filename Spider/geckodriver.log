@@ -1,0 +1,5 @@
+[1884:3212:0126/182813.069:ERROR:cache_util_win.cc(19)] Unable to move the cache: 5
+[1884:3212:0126/182813.069:ERROR:cache_util.cc(140)] Unable to move cache folder C:\Users\Administrator\AppData\Local\Google\Chrome\User Data\ShaderCache\GPUCache to C:\Users\Administrator\AppData\Local\Google\Chrome\User Data\ShaderCache\old_GPUCache_000
+[1884:3212:0126/182813.069:ERROR:disk_cache.cc(168)] Unable to create cache
+[1884:3212:0126/182813.069:ERROR:shader_disk_cache.cc(620)] Shader Cache Creation failed: -2
+已在现有的浏览器会话中创建新的窗口。

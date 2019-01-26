@@ -42,22 +42,21 @@ li = [49, 38, 65, 97, 76, 13, 27, 49]
 # print(quicksort(li))
 
 
-def quick(li):
-    less = []
-    grater = []
-    if len(li) < 1:
-        return li
-    min = li.pop()
-    for x in li:
-        if x < min:
-            less.append(x)
-        else:
-            grater.append(x)
-    return quick(less) + [min] + quick(grater)
+# 实现快速排序
+def bubble_sort(li):
+    unsorted_list_index = len(li)-1
+    sorted = False
+    while not sorted:
+        sorted = True
+        for i in range(unsorted_list_index):
+            if li[i] > li[i+1]:
+                sorted = False
+                li[i], li[i+1] = li[i+1], li[i]
+        unsorted_list_index = unsorted_list_index -1
+
 li = [49, 38, 65, 97, 76, 13, 27, 49]
-print(quicksort(li))
-
-
+bubble_sort(li)
+print(li)
 
 
 # 斐波拉契数列
