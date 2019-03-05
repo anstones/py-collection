@@ -706,3 +706,7 @@ django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in "
 2019-03-05 17:52:29,238 [Thread-11:11508] [django.server:124] [ERROR]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 500 59
 2019-03-05 17:52:29,242 [Thread-12:8268] [django.server:124] [INFO]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 200 0
 2019-03-05 17:52:29,243 [Thread-12:8268] [django.server:124] [ERROR]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 500 59
+2019-03-05 18:20:38,737 [Dummy-1:7964] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-05 18:20:38,739 [Dummy-1:7964] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-03-05 18:20:39,126 [Dummy-1:7964] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-03-05 18:20:39,129 [Dummy-1:7964] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
