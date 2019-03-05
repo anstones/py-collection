@@ -3,8 +3,11 @@ from .models import Publish
 from rest_framework.views import APIView
 from rest_framework import serializers
 from rest_framework.response import Response
+from django.http import StreamingHttpResponse
 import logging
+import os
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 logger = logging.getLogger('django')
 
 class PublishSerializers(serializers.Serializer):
@@ -38,3 +41,25 @@ class PublishView(APIView):
 
     def post(self,request):
         pass
+
+
+class DownloadFile(APIView):
+    # 下载文件
+    def get(self, request):
+        file_name = request.GET["file_name"]
+        the_file_name = BASE_DIR + os.sep + "/../" + 'static' + os.sep + file_name
+        response = StreamingHttpResponse(self.file_iterator(the_file_name))
+        response['Content-Type'] = 'application/octet-stream'
+        response['Content-Disposition'] = 'attachment;filename="{0}"'.format(the_file_name) 
+        return response
+    
+    def file_iterator(self, file_name, chunk_size=512):
+        with open(file_name) as f:
+            while True:
+                c = f.read(chunk_size)
+                if c:
+                    yield c
+                else:
+                    break
+    
+    

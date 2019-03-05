@@ -86,7 +86,7 @@ DATABASES = {
         'NAME': 'mine',
         'USER': 'root',
         'PASSWORD': 'mysql',
-        'HOST': '192.168.253.128',
+        'HOST': '192.168.160.128',
         'PORT': '3306',
     }
 }
@@ -183,11 +183,6 @@ LOGGING = {
             'handlers': ['default','console'],
             'level': 'DEBUG',
             'propagate': False
-        },
-        'XieYin.app':{
-            'handlers': ['default','console'],
-            'level': 'DEBUG',
-            'propagate': True         
         },
         'django.request': {
             'handlers': ['request_handler'],

@@ -48,3 +48,661 @@ django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<Reg
 2019-01-08 14:32:59,000 [Thread-6:9260] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
 2019-01-08 14:32:59,001 [Thread-6:9260] [django.db.backends:90] [DEBUG]- (0.001) SELECT `app1_publish`.`nid`, `app1_publish`.`name`, `app1_publish`.`city`, `app1_publish`.`email` FROM `app1_publish`; args=()
 2019-01-08 14:32:59,022 [Thread-6:9260] [django.server:124] [INFO]- "GET /app1/publishes HTTP/1.1" 200 11450
+2019-03-05 14:37:41,073 [Dummy-1:1688] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-05 14:37:41,099 [Dummy-1:1688] [django.db.backends:90] [DEBUG]- (0.011) SELECT VERSION(); args=None
+2019-03-05 14:37:48,884 [Dummy-1:1688] [django.db.backends:90] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2019-03-05 14:37:48,885 [Dummy-1:1688] [django.db.backends.schema:111] [DEBUG]- CREATE TABLE `django_migrations` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `app` varchar(255) NOT NULL, `name` varchar(255) NOT NULL, `applied` datetime(6) NOT NULL); (params None)
+2019-03-05 14:37:49,578 [Dummy-1:1688] [django.db.backends:90] [DEBUG]- (0.692) CREATE TABLE `django_migrations` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `app` varchar(255) NOT NULL, `name` varchar(255) NOT NULL, `applied` datetime(6) NOT NULL); args=None
+2019-03-05 14:37:49,619 [Dummy-1:1688] [django.db.backends:90] [DEBUG]- (0.040) SELECT engine FROM information_schema.tables WHERE table_name = 'django_migrations'; args=['django_migrations']
+2019-03-05 14:37:49,620 [Dummy-1:1688] [django.db.backends:90] [DEBUG]- (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'django_migrations'; args=['django_migrations']
+2019-03-05 14:37:49,622 [Dummy-1:1688] [django.db.backends:90] [DEBUG]- (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'django_migrations'; args=['django_migrations']
+2019-03-05 14:37:49,630 [Dummy-1:1688] [django.db.backends:90] [DEBUG]- (0.008) SELECT engine FROM information_schema.tables WHERE table_name = 'django_migrations'; args=['django_migrations']
+2019-03-05 14:37:50,109 [Dummy-1:1688] [django.db.backends:90] [DEBUG]- (0.446) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-05 14:38:05,276 [Thread-2:11648] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app1.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\app1\\urls.py'> (None:None) ^app1/>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/$>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/(?P<pk>[0-9]+)/$>]], 'path': ''}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2019-03-05 14:38:05,400 [Thread-2:11648] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app1.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\app1\\urls.py'> (None:None) ^app1/>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/$>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/(?P<pk>[0-9]+)/$>]], 'path': ''}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'app1.urls' from 'C:\\\\Users\\\\Administrator\\\\Desktop\\\\mine\\\\Project\\\\project\\\\Mydjango\\\\HelloWorld\\\\HelloWorld\\\\apps\\\\app1\\\\urls.py'> (None:None) ^app1/>"
+2019-03-05 14:38:05,402 [Thread-2:11648] [django.server:124] [WARNING]- "GET / HTTP/1.1" 404 2360
+2019-03-05 14:38:05,839 [Thread-3:7548] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app1.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\app1\\urls.py'> (None:None) ^app1/>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/$>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/(?P<pk>[0-9]+)/$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2019-03-05 14:38:05,842 [Thread-3:7548] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app1.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\app1\\urls.py'> (None:None) ^app1/>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/$>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/(?P<pk>[0-9]+)/$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'app1.urls' from 'C:\\\\Users\\\\Administrator\\\\Desktop\\\\mine\\\\Project\\\\project\\\\Mydjango\\\\HelloWorld\\\\HelloWorld\\\\apps\\\\app1\\\\urls.py'> (None:None) ^app1/>"
+2019-03-05 14:38:05,844 [Thread-3:7548] [django.server:124] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 2411
+2019-03-05 14:38:13,066 [Thread-4:11364] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app1.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\app1\\urls.py'> (None:None) ^app1/>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/$>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/(?P<pk>[0-9]+)/$>]], 'path': 'app1'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2019-03-05 14:38:13,068 [Thread-4:11364] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app1.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\app1\\urls.py'> (None:None) ^app1/>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/$>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/(?P<pk>[0-9]+)/$>]], 'path': 'app1'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'app1.urls' from 'C:\\\\Users\\\\Administrator\\\\Desktop\\\\mine\\\\Project\\\\project\\\\Mydjango\\\\HelloWorld\\\\HelloWorld\\\\apps\\\\app1\\\\urls.py'> (None:None) ^app1/>"
+2019-03-05 14:38:13,071 [Thread-4:11364] [django.server:124] [WARNING]- "GET /app1 HTTP/1.1" 404 2390
+2019-03-05 14:38:24,075 [Thread-6:5952] [django.server:124] [INFO]- "GET /admin/ HTTP/1.1" 302 0
+2019-03-05 14:38:24,289 [Thread-7:1116] [django.template:925] [DEBUG]- Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\context.py", line 87, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 888, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in "[{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002259E1032F0>>, 'request': <WSGIRequest: GET '/admin/login/?next=/admin/'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002259E105DA0>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x000002259E154B70>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000002259E105D30>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <AdminAuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, 'view': <django.contrib.auth.views.LoginView object at 0x000002259E105F28>, 'next': '/admin/', 'site': <django.contrib.sites.requests.RequestSite object at 0x000002259E0D5240>, 'site_name': '127.0.0.1:8000', 'site_title': 'Django 站点管理员', 'site_header': 'Django 管理', 'site_url': '/', 'has_permission': False, 'available_apps': [], 'title': '登录', 'app_path': '/admin/login/?next=/admin/', 'username': '', 'LANGUAGE_CODE': 'zh-Hans', 'LANGUAGE_BIDI': False}]"
+2019-03-05 14:38:26,383 [Thread-7:1116] [django.template:925] [DEBUG]- Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\context.py", line 87, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 888, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in "[{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002259E1032F0>>, 'request': <WSGIRequest: GET '/admin/login/?next=/admin/'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002259E105DA0>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x000002259E154B70>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000002259E105D30>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <AdminAuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, 'view': <django.contrib.auth.views.LoginView object at 0x000002259E105F28>, 'next': '/admin/', 'site': <django.contrib.sites.requests.RequestSite object at 0x000002259E0D5240>, 'site_name': '127.0.0.1:8000', 'site_title': 'Django 站点管理员', 'site_header': 'Django 管理', 'site_url': '/', 'has_permission': False, 'available_apps': [], 'title': '登录', 'app_path': '/admin/login/?next=/admin/', 'username': '', 'LANGUAGE_CODE': 'zh-Hans', 'LANGUAGE_BIDI': False}]"
+2019-03-05 14:38:26,444 [Thread-7:1116] [django.server:124] [INFO]- "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1652
+2019-03-05 14:38:26,548 [Thread-9:7020] [django.server:124] [INFO]- "GET /static/admin/css/login.css HTTP/1.1" 200 1203
+2019-03-05 14:38:26,562 [Thread-8:12464] [django.server:124] [INFO]- "GET /static/admin/css/base.css HTTP/1.1" 200 16066
+2019-03-05 14:38:26,612 [Thread-10:11664] [django.server:124] [INFO]- "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+2019-03-05 14:38:26,777 [Thread-11:12828] [django.server:124] [INFO]- "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+2019-03-05 14:38:26,802 [Thread-12:8680] [django.server:124] [INFO]- "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+2019-03-05 14:39:05,942 [Thread-13:5952] [django:26] [DEBUG]- request ip '127.0.0.1'
+2019-03-05 14:39:06,038 [Thread-13:5952] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-05 14:39:06,039 [Thread-13:5952] [django.db.backends:90] [DEBUG]- (0.000) SELECT `app1_publish`.`nid`, `app1_publish`.`name`, `app1_publish`.`city`, `app1_publish`.`email` FROM `app1_publish`; args=()
+2019-03-05 14:39:06,302 [Thread-13:5952] [django.db.backends:90] [DEBUG]- (0.000) SELECT `app1_publish`.`nid`, `app1_publish`.`name`, `app1_publish`.`city`, `app1_publish`.`email` FROM `app1_publish` LIMIT 21; args=()
+2019-03-05 14:39:06,303 [Thread-13:5952] [django.db.backends:90] [DEBUG]- (0.000) SELECT `app1_publish`.`nid`, `app1_publish`.`name`, `app1_publish`.`city`, `app1_publish`.`email` FROM `app1_publish` LIMIT 21; args=()
+2019-03-05 14:39:06,304 [Thread-13:5952] [django.db.backends:90] [DEBUG]- (0.000) SELECT `app1_publish`.`nid`, `app1_publish`.`name`, `app1_publish`.`city`, `app1_publish`.`email` FROM `app1_publish` LIMIT 21; args=()
+2019-03-05 14:39:06,306 [Thread-13:5952] [django.db.backends:90] [DEBUG]- (0.001) SELECT `app1_publish`.`nid`, `app1_publish`.`name`, `app1_publish`.`city`, `app1_publish`.`email` FROM `app1_publish` LIMIT 21; args=()
+2019-03-05 14:39:06,306 [Thread-13:5952] [django.db.backends:90] [DEBUG]- (0.000) SELECT `app1_publish`.`nid`, `app1_publish`.`name`, `app1_publish`.`city`, `app1_publish`.`email` FROM `app1_publish` LIMIT 21; args=()
+2019-03-05 14:39:06,307 [Thread-13:5952] [django.db.backends:90] [DEBUG]- (0.000) SELECT `app1_publish`.`nid`, `app1_publish`.`name`, `app1_publish`.`city`, `app1_publish`.`email` FROM `app1_publish` LIMIT 21; args=()
+2019-03-05 14:39:06,307 [Thread-13:5952] [django.db.backends:90] [DEBUG]- (0.000) SELECT `app1_publish`.`nid`, `app1_publish`.`name`, `app1_publish`.`city`, `app1_publish`.`email` FROM `app1_publish` LIMIT 21; args=()
+2019-03-05 14:39:06,319 [Thread-13:5952] [django.db.backends:90] [DEBUG]- (0.011) SELECT `app1_publish`.`nid`, `app1_publish`.`name`, `app1_publish`.`city`, `app1_publish`.`email` FROM `app1_publish` LIMIT 21; args=()
+2019-03-05 14:39:06,320 [Thread-13:5952] [django.db.backends:90] [DEBUG]- (0.000) SELECT `app1_publish`.`nid`, `app1_publish`.`name`, `app1_publish`.`city`, `app1_publish`.`email` FROM `app1_publish` LIMIT 21; args=()
+2019-03-05 14:39:06,321 [Thread-13:5952] [django.db.backends:90] [DEBUG]- (0.000) SELECT `app1_publish`.`nid`, `app1_publish`.`name`, `app1_publish`.`city`, `app1_publish`.`email` FROM `app1_publish` LIMIT 21; args=()
+2019-03-05 14:39:06,401 [Thread-13:5952] [django.server:124] [ERROR]- "GET /app1/publishes HTTP/1.1" 500 227010
+2019-03-05 14:41:16,679 [MainThread:7204] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-05 14:41:16,686 [MainThread:7204] [django.db.backends:90] [DEBUG]- (0.006) SELECT VERSION(); args=None
+2019-03-05 14:41:17,035 [MainThread:7204] [django.db.backends:90] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2019-03-05 14:41:17,038 [MainThread:7204] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-05 14:41:33,176 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-05 14:41:33,181 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.005) SELECT @@sql_mode; args=None
+2019-03-05 14:41:33,182 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-03-05 14:41:33,527 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2019-03-05 14:41:33,530 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-05 14:41:33,531 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2019-03-05 14:41:33,531 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-05 14:41:33,534 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- CREATE TABLE `django_content_type` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `name` varchar(100) NOT NULL, `app_label` varchar(100) NOT NULL, `model` varchar(100) NOT NULL); (params None)
+2019-03-05 14:41:33,617 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.083) CREATE TABLE `django_content_type` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `name` varchar(100) NOT NULL, `app_label` varchar(100) NOT NULL, `model` varchar(100) NOT NULL); args=None
+2019-03-05 14:41:33,643 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.027) SELECT engine FROM information_schema.tables WHERE table_name = 'django_content_type'; args=['django_content_type']
+2019-03-05 14:41:33,644 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) SELECT engine FROM information_schema.tables WHERE table_name = 'django_content_type'; args=['django_content_type']
+2019-03-05 14:41:33,645 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) SELECT engine FROM information_schema.tables WHERE table_name = 'django_content_type'; args=['django_content_type']
+2019-03-05 14:41:33,646 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) SELECT engine FROM information_schema.tables WHERE table_name = 'django_content_type'; args=['django_content_type']
+2019-03-05 14:41:33,662 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- ALTER TABLE `django_content_type` ADD CONSTRAINT `django_content_type_app_label_model_76bd3d3b_uniq` UNIQUE (`app_label`, `model`); (params ())
+2019-03-05 14:41:33,808 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.145) ALTER TABLE `django_content_type` ADD CONSTRAINT `django_content_type_app_label_model_76bd3d3b_uniq` UNIQUE (`app_label`, `model`); args=()
+2019-03-05 14:41:33,809 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-03-05 14:41:33,843 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.034) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('contenttypes', '0001_initial', '2019-03-05 06:41:33.809475'); args=['contenttypes', '0001_initial', '2019-03-05 06:41:33.809475']
+2019-03-05 14:41:33,847 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- CREATE TABLE `auth_permission` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `name` varchar(50) NOT NULL, `content_type_id` integer NOT NULL, `codename` varchar(100) NOT NULL); (params None)
+2019-03-05 14:41:33,873 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.024) CREATE TABLE `auth_permission` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `name` varchar(50) NOT NULL, `content_type_id` integer NOT NULL, `codename` varchar(100) NOT NULL); args=None
+2019-03-05 14:41:33,874 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'auth_permission'; args=['auth_permission']
+2019-03-05 14:41:33,875 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'auth_permission'; args=['auth_permission']
+2019-03-05 14:41:33,876 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'auth_permission'; args=['auth_permission']
+2019-03-05 14:41:33,877 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'auth_permission'; args=['auth_permission']
+2019-03-05 14:41:33,879 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- CREATE TABLE `auth_group` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `name` varchar(80) NOT NULL UNIQUE); (params None)
+2019-03-05 14:41:33,999 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.119) CREATE TABLE `auth_group` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `name` varchar(80) NOT NULL UNIQUE); args=None
+2019-03-05 14:41:34,019 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.018) SELECT engine FROM information_schema.tables WHERE table_name = 'auth_group'; args=['auth_group']
+2019-03-05 14:41:34,022 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.002) SELECT engine FROM information_schema.tables WHERE table_name = 'auth_group'; args=['auth_group']
+2019-03-05 14:41:34,024 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- CREATE TABLE `auth_group_permissions` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `group_id` integer NOT NULL, `permission_id` integer NOT NULL); (params None)
+2019-03-05 14:41:34,079 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.055) CREATE TABLE `auth_group_permissions` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `group_id` integer NOT NULL, `permission_id` integer NOT NULL); args=None
+2019-03-05 14:41:34,091 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.012) SELECT engine FROM information_schema.tables WHERE table_name = 'auth_group_permissions'; args=['auth_group_permissions']
+2019-03-05 14:41:34,092 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'auth_group_permissions'; args=['auth_group_permissions']
+2019-03-05 14:41:34,093 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'auth_group_permissions'; args=['auth_group_permissions']
+2019-03-05 14:41:34,098 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- CREATE TABLE `auth_user` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `password` varchar(128) NOT NULL, `last_login` datetime(6) NOT NULL, `is_superuser` bool NOT NULL, `username` varchar(30) NOT NULL UNIQUE, `first_name` varchar(30) NOT NULL, `last_name` varchar(30) NOT NULL, `email` varchar(75) NOT NULL, `is_staff` bool NOT NULL, `is_active` bool NOT NULL, `date_joined` datetime(6) NOT NULL); (params None)
+2019-03-05 14:41:34,146 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.048) CREATE TABLE `auth_user` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `password` varchar(128) NOT NULL, `last_login` datetime(6) NOT NULL, `is_superuser` bool NOT NULL, `username` varchar(30) NOT NULL UNIQUE, `first_name` varchar(30) NOT NULL, `last_name` varchar(30) NOT NULL, `email` varchar(75) NOT NULL, `is_staff` bool NOT NULL, `is_active` bool NOT NULL, `date_joined` datetime(6) NOT NULL); args=None
+2019-03-05 14:41:34,147 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'auth_user'; args=['auth_user']
+2019-03-05 14:41:34,148 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'auth_user'; args=['auth_user']
+2019-03-05 14:41:34,148 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) SELECT engine FROM information_schema.tables WHERE table_name = 'auth_user'; args=['auth_user']
+2019-03-05 14:41:34,149 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'auth_user'; args=['auth_user']
+2019-03-05 14:41:34,149 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) SELECT engine FROM information_schema.tables WHERE table_name = 'auth_user'; args=['auth_user']
+2019-03-05 14:41:34,150 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'auth_user'; args=['auth_user']
+2019-03-05 14:41:34,150 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) SELECT engine FROM information_schema.tables WHERE table_name = 'auth_user'; args=['auth_user']
+2019-03-05 14:41:34,151 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'auth_user'; args=['auth_user']
+2019-03-05 14:41:34,151 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) SELECT engine FROM information_schema.tables WHERE table_name = 'auth_user'; args=['auth_user']
+2019-03-05 14:41:34,154 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.003) SELECT engine FROM information_schema.tables WHERE table_name = 'auth_user'; args=['auth_user']
+2019-03-05 14:41:34,156 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'auth_user'; args=['auth_user']
+2019-03-05 14:41:34,157 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- CREATE TABLE `auth_user_groups` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `user_id` integer NOT NULL, `group_id` integer NOT NULL); (params None)
+2019-03-05 14:41:34,180 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.024) CREATE TABLE `auth_user_groups` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `user_id` integer NOT NULL, `group_id` integer NOT NULL); args=None
+2019-03-05 14:41:34,181 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'auth_user_groups'; args=['auth_user_groups']
+2019-03-05 14:41:34,182 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) SELECT engine FROM information_schema.tables WHERE table_name = 'auth_user_groups'; args=['auth_user_groups']
+2019-03-05 14:41:34,183 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) SELECT engine FROM information_schema.tables WHERE table_name = 'auth_user_groups'; args=['auth_user_groups']
+2019-03-05 14:41:34,184 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- CREATE TABLE `auth_user_user_permissions` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `user_id` integer NOT NULL, `permission_id` integer NOT NULL); (params None)
+2019-03-05 14:41:34,241 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.056) CREATE TABLE `auth_user_user_permissions` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `user_id` integer NOT NULL, `permission_id` integer NOT NULL); args=None
+2019-03-05 14:41:34,243 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'auth_user_user_permissions'; args=['auth_user_user_permissions']
+2019-03-05 14:41:34,243 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) SELECT engine FROM information_schema.tables WHERE table_name = 'auth_user_user_permissions'; args=['auth_user_user_permissions']
+2019-03-05 14:41:34,244 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'auth_user_user_permissions'; args=['auth_user_user_permissions']
+2019-03-05 14:41:34,244 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- ALTER TABLE `auth_permission` ADD CONSTRAINT `auth_permission_content_type_id_2f476e4b_fk_django_co` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`); (params ())
+2019-03-05 14:41:34,334 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.090) ALTER TABLE `auth_permission` ADD CONSTRAINT `auth_permission_content_type_id_2f476e4b_fk_django_co` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`); args=()
+2019-03-05 14:41:34,335 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- ALTER TABLE `auth_permission` ADD CONSTRAINT `auth_permission_content_type_id_codename_01ab375a_uniq` UNIQUE (`content_type_id`, `codename`); (params ())
+2019-03-05 14:41:34,356 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.021) ALTER TABLE `auth_permission` ADD CONSTRAINT `auth_permission_content_type_id_codename_01ab375a_uniq` UNIQUE (`content_type_id`, `codename`); args=()
+2019-03-05 14:41:34,357 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- ALTER TABLE `auth_group_permissions` ADD CONSTRAINT `auth_group_permissions_group_id_b120cbf9_fk_auth_group_id` FOREIGN KEY (`group_id`) REFERENCES `auth_group` (`id`); (params ())
+2019-03-05 14:41:34,405 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.048) ALTER TABLE `auth_group_permissions` ADD CONSTRAINT `auth_group_permissions_group_id_b120cbf9_fk_auth_group_id` FOREIGN KEY (`group_id`) REFERENCES `auth_group` (`id`); args=()
+2019-03-05 14:41:34,406 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- ALTER TABLE `auth_group_permissions` ADD CONSTRAINT `auth_group_permissio_permission_id_84c5c92e_fk_auth_perm` FOREIGN KEY (`permission_id`) REFERENCES `auth_permission` (`id`); (params ())
+2019-03-05 14:41:34,467 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.061) ALTER TABLE `auth_group_permissions` ADD CONSTRAINT `auth_group_permissio_permission_id_84c5c92e_fk_auth_perm` FOREIGN KEY (`permission_id`) REFERENCES `auth_permission` (`id`); args=()
+2019-03-05 14:41:34,467 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- ALTER TABLE `auth_group_permissions` ADD CONSTRAINT `auth_group_permissions_group_id_permission_id_0cd325b0_uniq` UNIQUE (`group_id`, `permission_id`); (params ())
+2019-03-05 14:41:34,510 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.042) ALTER TABLE `auth_group_permissions` ADD CONSTRAINT `auth_group_permissions_group_id_permission_id_0cd325b0_uniq` UNIQUE (`group_id`, `permission_id`); args=()
+2019-03-05 14:41:34,510 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- ALTER TABLE `auth_user_groups` ADD CONSTRAINT `auth_user_groups_user_id_6a12ed8b_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`); (params ())
+2019-03-05 14:41:34,555 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.044) ALTER TABLE `auth_user_groups` ADD CONSTRAINT `auth_user_groups_user_id_6a12ed8b_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`); args=()
+2019-03-05 14:41:34,556 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- ALTER TABLE `auth_user_groups` ADD CONSTRAINT `auth_user_groups_group_id_97559544_fk_auth_group_id` FOREIGN KEY (`group_id`) REFERENCES `auth_group` (`id`); (params ())
+2019-03-05 14:41:34,613 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.057) ALTER TABLE `auth_user_groups` ADD CONSTRAINT `auth_user_groups_group_id_97559544_fk_auth_group_id` FOREIGN KEY (`group_id`) REFERENCES `auth_group` (`id`); args=()
+2019-03-05 14:41:34,613 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- ALTER TABLE `auth_user_groups` ADD CONSTRAINT `auth_user_groups_user_id_group_id_94350c0c_uniq` UNIQUE (`user_id`, `group_id`); (params ())
+2019-03-05 14:41:34,657 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.044) ALTER TABLE `auth_user_groups` ADD CONSTRAINT `auth_user_groups_user_id_group_id_94350c0c_uniq` UNIQUE (`user_id`, `group_id`); args=()
+2019-03-05 14:41:34,657 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- ALTER TABLE `auth_user_user_permissions` ADD CONSTRAINT `auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`); (params ())
+2019-03-05 14:41:34,947 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.290) ALTER TABLE `auth_user_user_permissions` ADD CONSTRAINT `auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`); args=()
+2019-03-05 14:41:34,947 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- ALTER TABLE `auth_user_user_permissions` ADD CONSTRAINT `auth_user_user_permi_permission_id_1fbb5f2c_fk_auth_perm` FOREIGN KEY (`permission_id`) REFERENCES `auth_permission` (`id`); (params ())
+2019-03-05 14:41:35,075 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.127) ALTER TABLE `auth_user_user_permissions` ADD CONSTRAINT `auth_user_user_permi_permission_id_1fbb5f2c_fk_auth_perm` FOREIGN KEY (`permission_id`) REFERENCES `auth_permission` (`id`); args=()
+2019-03-05 14:41:35,075 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- ALTER TABLE `auth_user_user_permissions` ADD CONSTRAINT `auth_user_user_permissions_user_id_permission_id_14a6b632_uniq` UNIQUE (`user_id`, `permission_id`); (params ())
+2019-03-05 14:41:35,193 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.118) ALTER TABLE `auth_user_user_permissions` ADD CONSTRAINT `auth_user_user_permissions_user_id_permission_id_14a6b632_uniq` UNIQUE (`user_id`, `permission_id`); args=()
+2019-03-05 14:41:35,195 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-03-05 14:41:35,196 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('auth', '0001_initial', '2019-03-05 06:41:35.195028'); args=['auth', '0001_initial', '2019-03-05 06:41:35.195028']
+2019-03-05 14:41:35,229 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- CREATE TABLE `django_admin_log` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `action_time` datetime(6) NOT NULL, `object_id` longtext NULL, `object_repr` varchar(200) NOT NULL, `action_flag` smallint UNSIGNED NOT NULL, `change_message` longtext NOT NULL, `content_type_id` integer NULL, `user_id` integer NOT NULL); (params None)
+2019-03-05 14:41:35,277 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.048) CREATE TABLE `django_admin_log` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `action_time` datetime(6) NOT NULL, `object_id` longtext NULL, `object_repr` varchar(200) NOT NULL, `action_flag` smallint UNSIGNED NOT NULL, `change_message` longtext NOT NULL, `content_type_id` integer NULL, `user_id` integer NOT NULL); args=None
+2019-03-05 14:41:35,279 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'django_admin_log'; args=['django_admin_log']
+2019-03-05 14:41:35,280 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'django_admin_log'; args=['django_admin_log']
+2019-03-05 14:41:35,281 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'django_admin_log'; args=['django_admin_log']
+2019-03-05 14:41:35,282 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'django_admin_log'; args=['django_admin_log']
+2019-03-05 14:41:35,288 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.006) SELECT engine FROM information_schema.tables WHERE table_name = 'django_admin_log'; args=['django_admin_log']
+2019-03-05 14:41:35,296 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.007) SELECT engine FROM information_schema.tables WHERE table_name = 'django_admin_log'; args=['django_admin_log']
+2019-03-05 14:41:35,297 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'django_admin_log'; args=['django_admin_log']
+2019-03-05 14:41:35,298 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) SELECT engine FROM information_schema.tables WHERE table_name = 'django_admin_log'; args=['django_admin_log']
+2019-03-05 14:41:35,298 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- ALTER TABLE `django_admin_log` ADD CONSTRAINT `django_admin_log_content_type_id_c4bce8eb_fk_django_co` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`); (params ())
+2019-03-05 14:41:35,338 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.039) ALTER TABLE `django_admin_log` ADD CONSTRAINT `django_admin_log_content_type_id_c4bce8eb_fk_django_co` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`); args=()
+2019-03-05 14:41:35,344 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- ALTER TABLE `django_admin_log` ADD CONSTRAINT `django_admin_log_user_id_c564eba6_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`); (params ())
+2019-03-05 14:41:35,466 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.122) ALTER TABLE `django_admin_log` ADD CONSTRAINT `django_admin_log_user_id_c564eba6_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`); args=()
+2019-03-05 14:41:35,468 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.002) SHOW FULL TABLES; args=None
+2019-03-05 14:41:35,469 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('admin', '0001_initial', '2019-03-05 06:41:35.468584'); args=['admin', '0001_initial', '2019-03-05 06:41:35.468584']
+2019-03-05 14:41:35,478 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-03-05 14:41:35,480 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('admin', '0002_logentry_remove_auto_add', '2019-03-05 06:41:35.479555'); args=['admin', '0002_logentry_remove_auto_add', '2019-03-05 06:41:35.479555']
+2019-03-05 14:41:35,485 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- CREATE TABLE `app1_publish` (`nid` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `name` varchar(32) NOT NULL, `city` varchar(32) NOT NULL, `email` varchar(254) NOT NULL); (params None)
+2019-03-05 14:41:35,625 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.140) CREATE TABLE `app1_publish` (`nid` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `name` varchar(32) NOT NULL, `city` varchar(32) NOT NULL, `email` varchar(254) NOT NULL); args=None
+2019-03-05 14:41:35,627 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'app1_publish'; args=['app1_publish']
+2019-03-05 14:41:35,629 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'app1_publish'; args=['app1_publish']
+2019-03-05 14:41:35,632 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'app1_publish'; args=['app1_publish']
+2019-03-05 14:41:35,633 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'app1_publish'; args=['app1_publish']
+2019-03-05 14:41:35,635 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.002) SHOW FULL TABLES; args=None
+2019-03-05 14:41:35,636 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('app1', '0001_initial', '2019-03-05 06:41:35.635459'); args=['app1', '0001_initial', '2019-03-05 06:41:35.635459']
+2019-03-05 14:41:35,646 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- ALTER TABLE `django_content_type` MODIFY `name` varchar(100) NULL; (params [])
+2019-03-05 14:41:35,803 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.157) ALTER TABLE `django_content_type` MODIFY `name` varchar(100) NULL; args=[]
+2019-03-05 14:41:35,812 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- ALTER TABLE `django_content_type` DROP COLUMN `name`; (params ())
+2019-03-05 14:41:36,158 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.345) ALTER TABLE `django_content_type` DROP COLUMN `name`; args=()
+2019-03-05 14:41:36,159 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2019-03-05 14:41:36,161 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('contenttypes', '0002_remove_content_type_name', '2019-03-05 06:41:36.160234'); args=['contenttypes', '0002_remove_content_type_name', '2019-03-05 06:41:36.160234']
+2019-03-05 14:41:36,167 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- ALTER TABLE `auth_permission` MODIFY `name` varchar(255) NOT NULL; (params [])
+2019-03-05 14:41:36,470 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.304) ALTER TABLE `auth_permission` MODIFY `name` varchar(255) NOT NULL; args=[]
+2019-03-05 14:41:36,472 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-03-05 14:41:36,474 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('auth', '0002_alter_permission_name_max_length', '2019-03-05 06:41:36.473923'); args=['auth', '0002_alter_permission_name_max_length', '2019-03-05 06:41:36.473923']
+2019-03-05 14:41:36,483 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- ALTER TABLE `auth_user` MODIFY `email` varchar(254) NOT NULL; (params [])
+2019-03-05 14:41:36,558 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.074) ALTER TABLE `auth_user` MODIFY `email` varchar(254) NOT NULL; args=[]
+2019-03-05 14:41:36,559 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-03-05 14:41:36,560 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('auth', '0003_alter_user_email_max_length', '2019-03-05 06:41:36.559346'); args=['auth', '0003_alter_user_email_max_length', '2019-03-05 06:41:36.559346']
+2019-03-05 14:41:36,590 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-03-05 14:41:36,591 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('auth', '0004_alter_user_username_opts', '2019-03-05 06:41:36.590263'); args=['auth', '0004_alter_user_username_opts', '2019-03-05 06:41:36.590263']
+2019-03-05 14:41:36,604 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- ALTER TABLE `auth_user` MODIFY `last_login` datetime(6) NULL; (params [])
+2019-03-05 14:41:36,681 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.075) ALTER TABLE `auth_user` MODIFY `last_login` datetime(6) NULL; args=[]
+2019-03-05 14:41:36,682 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-03-05 14:41:36,683 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('auth', '0005_alter_user_last_login_null', '2019-03-05 06:41:36.682018'); args=['auth', '0005_alter_user_last_login_null', '2019-03-05 06:41:36.682018']
+2019-03-05 14:41:36,688 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.002) SHOW FULL TABLES; args=None
+2019-03-05 14:41:36,688 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('auth', '0006_require_contenttypes_0002', '2019-03-05 06:41:36.688003'); args=['auth', '0006_require_contenttypes_0002', '2019-03-05 06:41:36.688003']
+2019-03-05 14:41:36,696 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-03-05 14:41:36,697 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('auth', '0007_alter_validators_add_error_messages', '2019-03-05 06:41:36.696985'); args=['auth', '0007_alter_validators_add_error_messages', '2019-03-05 06:41:36.696985']
+2019-03-05 14:41:36,716 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.011) 
+            SELECT kc.`constraint_name`, kc.`column_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = DATABASE() AND
+                kc.table_name = 'django_admin_log'
+        ; args=['django_admin_log']
+2019-03-05 14:41:36,718 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.002) 
+            SELECT c.constraint_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = DATABASE() AND
+                c.table_name = 'django_admin_log'
+        ; args=['django_admin_log']
+2019-03-05 14:41:36,721 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SHOW INDEX FROM `django_admin_log`; args=None
+2019-03-05 14:41:36,722 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- ALTER TABLE `django_admin_log` DROP FOREIGN KEY `django_admin_log_user_id_c564eba6_fk_auth_user_id`; (params ())
+2019-03-05 14:41:36,726 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.004) ALTER TABLE `django_admin_log` DROP FOREIGN KEY `django_admin_log_user_id_c564eba6_fk_auth_user_id`; args=()
+2019-03-05 14:41:36,727 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- ALTER TABLE `auth_user` MODIFY `username` varchar(150) NOT NULL; (params [])
+2019-03-05 14:41:36,783 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.056) ALTER TABLE `auth_user` MODIFY `username` varchar(150) NOT NULL; args=[]
+2019-03-05 14:41:36,784 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- ALTER TABLE `django_admin_log` ADD CONSTRAINT `django_admin_log_user_id_c564eba6_fk` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`); (params ())
+2019-03-05 14:41:36,834 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.050) ALTER TABLE `django_admin_log` ADD CONSTRAINT `django_admin_log_user_id_c564eba6_fk` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`); args=()
+2019-03-05 14:41:36,839 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.005) SHOW FULL TABLES; args=None
+2019-03-05 14:41:36,841 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('auth', '0008_alter_user_username_max_length', '2019-03-05 06:41:36.840794'); args=['auth', '0008_alter_user_username_max_length', '2019-03-05 06:41:36.840794']
+2019-03-05 14:41:36,844 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- CREATE TABLE `django_session` (`session_key` varchar(40) NOT NULL PRIMARY KEY, `session_data` longtext NOT NULL, `expire_date` datetime(6) NOT NULL); (params None)
+2019-03-05 14:41:36,861 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.016) CREATE TABLE `django_session` (`session_key` varchar(40) NOT NULL PRIMARY KEY, `session_data` longtext NOT NULL, `expire_date` datetime(6) NOT NULL); args=None
+2019-03-05 14:41:36,862 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'django_session'; args=['django_session']
+2019-03-05 14:41:36,863 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) SELECT engine FROM information_schema.tables WHERE table_name = 'django_session'; args=['django_session']
+2019-03-05 14:41:36,864 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'django_session'; args=['django_session']
+2019-03-05 14:41:36,864 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- CREATE INDEX `django_session_expire_date_a5c62663` ON `django_session` (`expire_date`); (params ())
+2019-03-05 14:41:36,903 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.039) CREATE INDEX `django_session_expire_date_a5c62663` ON `django_session` (`expire_date`); args=()
+2019-03-05 14:41:36,910 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.006) SHOW FULL TABLES; args=None
+2019-03-05 14:41:36,942 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.015) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('sessions', '0001_initial', '2019-03-05 06:41:36.911604'); args=['sessions', '0001_initial', '2019-03-05 06:41:36.911604']
+2019-03-05 14:41:36,959 [MainThread:13136] [django.db.backends.schema:111] [DEBUG]- CREATE TABLE `snippets_snippet` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `created` datetime(6) NOT NULL, `title` varchar(100) NOT NULL, `code` longtext NOT NULL, `linenos` bool NOT NULL, `language` varchar(100) NOT NULL, `style` varchar(100) NOT NULL); (params None)
+2019-03-05 14:41:37,001 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.042) CREATE TABLE `snippets_snippet` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `created` datetime(6) NOT NULL, `title` varchar(100) NOT NULL, `code` longtext NOT NULL, `linenos` bool NOT NULL, `language` varchar(100) NOT NULL, `style` varchar(100) NOT NULL); args=None
+2019-03-05 14:41:37,008 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.003) SELECT engine FROM information_schema.tables WHERE table_name = 'snippets_snippet'; args=['snippets_snippet']
+2019-03-05 14:41:37,009 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) SELECT engine FROM information_schema.tables WHERE table_name = 'snippets_snippet'; args=['snippets_snippet']
+2019-03-05 14:41:37,010 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'snippets_snippet'; args=['snippets_snippet']
+2019-03-05 14:41:37,011 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'snippets_snippet'; args=['snippets_snippet']
+2019-03-05 14:41:37,011 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) SELECT engine FROM information_schema.tables WHERE table_name = 'snippets_snippet'; args=['snippets_snippet']
+2019-03-05 14:41:37,011 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) SELECT engine FROM information_schema.tables WHERE table_name = 'snippets_snippet'; args=['snippets_snippet']
+2019-03-05 14:41:37,012 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) SELECT engine FROM information_schema.tables WHERE table_name = 'snippets_snippet'; args=['snippets_snippet']
+2019-03-05 14:41:37,013 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-03-05 14:41:37,014 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('snippets', '0001_initial', '2019-03-05 06:41:37.013772'); args=['snippets', '0001_initial', '2019-03-05 06:41:37.013772']
+2019-03-05 14:41:37,018 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-03-05 14:41:37,023 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('snippets', '0002_auto_20190305_1441', '2019-03-05 06:41:37.020754'); args=['snippets', '0002_auto_20190305_1441', '2019-03-05 06:41:37.020754']
+2019-03-05 14:41:37,026 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) SHOW FULL TABLES; args=None
+2019-03-05 14:41:37,027 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-05 14:41:37,055 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.021) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'admin' AND `django_content_type`.`model` = 'logentry'); args=('admin', 'logentry')
+2019-03-05 14:41:37,060 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.002) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'admin' AND `django_content_type`.`model` = 'logentry'); args=('admin', 'logentry')
+2019-03-05 14:41:37,062 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) INSERT INTO `django_content_type` (`app_label`, `model`) VALUES ('admin', 'logentry'); args=['admin', 'logentry']
+2019-03-05 14:41:37,106 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.039) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (1) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(1,)
+2019-03-05 14:41:37,110 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) INSERT INTO `auth_permission` (`name`, `content_type_id`, `codename`) VALUES ('Can add log entry', 1, 'add_logentry'), ('Can change log entry', 1, 'change_logentry'), ('Can delete log entry', 1, 'delete_logentry'); args=('Can add log entry', 1, 'add_logentry', 'Can change log entry', 1, 'change_logentry', 'Can delete log entry', 1, 'delete_logentry')
+2019-03-05 14:41:37,181 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'admin'; args=('admin',)
+2019-03-05 14:41:37,182 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'permission'); args=('auth', 'permission')
+2019-03-05 14:41:37,183 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'permission'); args=('auth', 'permission')
+2019-03-05 14:41:37,184 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) INSERT INTO `django_content_type` (`app_label`, `model`) VALUES ('auth', 'permission'); args=['auth', 'permission']
+2019-03-05 14:41:37,201 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'group'); args=('auth', 'group')
+2019-03-05 14:41:37,203 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.002) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'group'); args=('auth', 'group')
+2019-03-05 14:41:37,204 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) INSERT INTO `django_content_type` (`app_label`, `model`) VALUES ('auth', 'group'); args=['auth', 'group']
+2019-03-05 14:41:37,209 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'user'); args=('auth', 'user')
+2019-03-05 14:41:37,210 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'user'); args=('auth', 'user')
+2019-03-05 14:41:37,211 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) INSERT INTO `django_content_type` (`app_label`, `model`) VALUES ('auth', 'user'); args=['auth', 'user']
+2019-03-05 14:41:37,236 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.022) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (2, 3, 4) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(2, 3, 4)
+2019-03-05 14:41:37,240 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) INSERT INTO `auth_permission` (`name`, `content_type_id`, `codename`) VALUES ('Can add permission', 2, 'add_permission'), ('Can change permission', 2, 'change_permission'), ('Can delete permission', 2, 'delete_permission'), ('Can add group', 3, 'add_group'), ('Can change group', 3, 'change_group'), ('Can delete group', 3, 'delete_group'), ('Can add user', 4, 'add_user'), ('Can change user', 4, 'change_user'), ('Can delete user', 4, 'delete_user'); args=('Can add permission', 2, 'add_permission', 'Can change permission', 2, 'change_permission', 'Can delete permission', 2, 'delete_permission', 'Can add group', 3, 'add_group', 'Can change group', 3, 'change_group', 'Can delete group', 3, 'delete_group', 'Can add user', 4, 'add_user', 'Can change user', 4, 'change_user', 'Can delete user', 4, 'delete_user')
+2019-03-05 14:41:37,250 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.007) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'auth'; args=('auth',)
+2019-03-05 14:41:37,253 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.002) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'contenttypes' AND `django_content_type`.`model` = 'contenttype'); args=('contenttypes', 'contenttype')
+2019-03-05 14:41:37,256 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.002) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'contenttypes' AND `django_content_type`.`model` = 'contenttype'); args=('contenttypes', 'contenttype')
+2019-03-05 14:41:37,260 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) INSERT INTO `django_content_type` (`app_label`, `model`) VALUES ('contenttypes', 'contenttype'); args=['contenttypes', 'contenttype']
+2019-03-05 14:41:37,264 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (5) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(5,)
+2019-03-05 14:41:37,273 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.008) INSERT INTO `auth_permission` (`name`, `content_type_id`, `codename`) VALUES ('Can add content type', 5, 'add_contenttype'), ('Can change content type', 5, 'change_contenttype'), ('Can delete content type', 5, 'delete_contenttype'); args=('Can add content type', 5, 'add_contenttype', 'Can change content type', 5, 'change_contenttype', 'Can delete content type', 5, 'delete_contenttype')
+2019-03-05 14:41:37,276 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'contenttypes'; args=('contenttypes',)
+2019-03-05 14:41:37,278 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'sessions' AND `django_content_type`.`model` = 'session'); args=('sessions', 'session')
+2019-03-05 14:41:37,279 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'sessions' AND `django_content_type`.`model` = 'session'); args=('sessions', 'session')
+2019-03-05 14:41:37,280 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) INSERT INTO `django_content_type` (`app_label`, `model`) VALUES ('sessions', 'session'); args=['sessions', 'session']
+2019-03-05 14:41:37,284 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (6) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(6,)
+2019-03-05 14:41:37,287 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) INSERT INTO `auth_permission` (`name`, `content_type_id`, `codename`) VALUES ('Can add session', 6, 'add_session'), ('Can change session', 6, 'change_session'), ('Can delete session', 6, 'delete_session'); args=('Can add session', 6, 'add_session', 'Can change session', 6, 'change_session', 'Can delete session', 6, 'delete_session')
+2019-03-05 14:41:37,294 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'sessions'; args=('sessions',)
+2019-03-05 14:41:37,296 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'app1' AND `django_content_type`.`model` = 'publish'); args=('app1', 'publish')
+2019-03-05 14:41:37,297 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'app1' AND `django_content_type`.`model` = 'publish'); args=('app1', 'publish')
+2019-03-05 14:41:37,298 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) INSERT INTO `django_content_type` (`app_label`, `model`) VALUES ('app1', 'publish'); args=['app1', 'publish']
+2019-03-05 14:41:37,304 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.002) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (7) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(7,)
+2019-03-05 14:41:37,307 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.002) INSERT INTO `auth_permission` (`name`, `content_type_id`, `codename`) VALUES ('Can add publish', 7, 'add_publish'), ('Can change publish', 7, 'change_publish'), ('Can delete publish', 7, 'delete_publish'); args=('Can add publish', 7, 'add_publish', 'Can change publish', 7, 'change_publish', 'Can delete publish', 7, 'delete_publish')
+2019-03-05 14:41:37,311 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'app1'; args=('app1',)
+2019-03-05 14:41:37,312 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'snippets' AND `django_content_type`.`model` = 'snippet'); args=('snippets', 'snippet')
+2019-03-05 14:41:37,313 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'snippets' AND `django_content_type`.`model` = 'snippet'); args=('snippets', 'snippet')
+2019-03-05 14:41:40,238 [MainThread:13136] [django.db.backends:90] [DEBUG]- (2.924) INSERT INTO `django_content_type` (`app_label`, `model`) VALUES ('snippets', 'snippet'); args=['snippets', 'snippet']
+2019-03-05 14:41:40,283 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.010) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (8) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(8,)
+2019-03-05 14:41:40,661 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.370) INSERT INTO `auth_permission` (`name`, `content_type_id`, `codename`) VALUES ('Can add snippet', 8, 'add_snippet'), ('Can change snippet', 8, 'change_snippet'), ('Can delete snippet', 8, 'delete_snippet'); args=('Can add snippet', 8, 'add_snippet', 'Can change snippet', 8, 'change_snippet', 'Can delete snippet', 8, 'delete_snippet')
+2019-03-05 14:41:40,717 [MainThread:13136] [django.db.backends:90] [DEBUG]- (0.015) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'snippets'; args=('snippets',)
+2019-03-05 14:42:23,282 [Dummy-1:5516] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-05 14:42:23,282 [Dummy-1:5516] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-03-05 14:42:23,530 [Dummy-1:5516] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-03-05 14:42:23,533 [Dummy-1:5516] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-05 14:42:27,853 [Thread-2:8244] [django:26] [DEBUG]- request ip '127.0.0.1'
+2019-03-05 14:42:27,871 [Thread-2:8244] [django.db.backends:90] [DEBUG]- (0.003) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-05 14:42:27,875 [Thread-2:8244] [django.db.backends:90] [DEBUG]- (0.002) SELECT `app1_publish`.`nid`, `app1_publish`.`name`, `app1_publish`.`city`, `app1_publish`.`email` FROM `app1_publish`; args=()
+2019-03-05 14:42:28,012 [Thread-2:8244] [django.server:124] [INFO]- "GET /app1/publishes HTTP/1.1" 200 11106
+2019-03-05 14:42:28,168 [Thread-4:1052] [django.server:124] [INFO]- "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+2019-03-05 14:42:28,173 [Thread-6:12116] [django.server:124] [INFO]- "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+2019-03-05 14:42:28,176 [Thread-5:12800] [django.server:124] [INFO]- "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+2019-03-05 14:42:28,195 [Thread-3:13724] [django.server:124] [INFO]- "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+2019-03-05 14:42:28,231 [Thread-12:1980] [django.server:124] [INFO]- "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+2019-03-05 14:42:28,243 [Thread-8:7288] [django.server:124] [INFO]- "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+2019-03-05 14:42:28,249 [Thread-11:12684] [django.server:124] [INFO]- "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+2019-03-05 14:42:28,250 [Thread-9:2616] [django.server:124] [INFO]- "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1735
+2019-03-05 14:42:28,266 [Thread-13:13072] [django.server:124] [INFO]- "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+2019-03-05 14:42:28,288 [Thread-10:6284] [django.server:124] [INFO]- "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37045
+2019-03-05 14:42:28,347 [Thread-7:12732] [django.server:124] [INFO]- "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+2019-03-05 14:44:26,872 [Dummy-1:11360] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-05 14:44:26,873 [Dummy-1:11360] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-03-05 14:44:27,128 [Dummy-1:11360] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-03-05 14:44:27,131 [Dummy-1:11360] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-05 14:44:31,597 [Thread-2:5748] [django:26] [DEBUG]- request ip '127.0.0.1'
+2019-03-05 14:44:31,683 [Thread-2:5748] [django.db.backends:90] [DEBUG]- (0.025) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-05 14:44:31,714 [Thread-2:5748] [django.db.backends:90] [DEBUG]- (0.031) SELECT `app1_publish`.`nid`, `app1_publish`.`name`, `app1_publish`.`city`, `app1_publish`.`email` FROM `app1_publish`; args=()
+2019-03-05 14:44:31,747 [Thread-2:5748] [django.server:124] [INFO]- "GET /app1/publishes HTTP/1.1" 200 11106
+2019-03-05 14:53:04,931 [Dummy-1:2636] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-05 14:53:04,932 [Dummy-1:2636] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-03-05 14:53:15,043 [Dummy-1:4720] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-05 14:53:15,044 [Dummy-1:4720] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-03-05 14:53:15,395 [Dummy-1:4720] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-03-05 14:53:15,399 [Dummy-1:4720] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-05 14:53:33,641 [Dummy-1:11792] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-05 14:53:33,642 [Dummy-1:11792] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-03-05 14:53:33,961 [Dummy-1:11792] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-03-05 14:53:33,964 [Dummy-1:11792] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-05 14:53:43,019 [Dummy-1:10256] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-05 14:53:43,020 [Dummy-1:10256] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-03-05 14:53:43,320 [Dummy-1:10256] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-03-05 14:53:43,342 [Dummy-1:10256] [django.db.backends:90] [DEBUG]- (0.019) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-05 14:59:33,011 [Dummy-1:12344] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-05 14:59:33,012 [Dummy-1:12344] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-03-05 14:59:33,256 [Dummy-1:12344] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-03-05 14:59:33,260 [Dummy-1:12344] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-05 15:00:03,066 [Dummy-1:14440] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-05 15:00:03,067 [Dummy-1:14440] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-03-05 15:00:03,319 [Dummy-1:14440] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-03-05 15:00:03,325 [Dummy-1:14440] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-05 15:02:28,152 [Dummy-1:13136] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-05 15:02:28,153 [Dummy-1:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-03-05 15:02:28,489 [Dummy-1:13136] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-03-05 15:02:28,492 [Dummy-1:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-05 15:02:43,302 [Dummy-1:11364] [django.db.backends:90] [DEBUG]- (0.012) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-05 15:02:43,318 [Dummy-1:11364] [django.db.backends:90] [DEBUG]- (0.016) SELECT VERSION(); args=None
+2019-03-05 15:02:43,601 [Dummy-1:11364] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-03-05 15:02:43,611 [Dummy-1:11364] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-05 15:02:50,516 [Dummy-1:14568] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-05 15:02:50,517 [Dummy-1:14568] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-03-05 15:02:51,031 [Dummy-1:14568] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-03-05 15:02:51,067 [Dummy-1:14568] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-05 15:04:25,365 [Dummy-1:5280] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-05 15:04:25,374 [Dummy-1:5280] [django.db.backends:90] [DEBUG]- (0.008) SELECT VERSION(); args=None
+2019-03-05 15:04:25,764 [Dummy-1:5280] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-03-05 15:04:25,800 [Dummy-1:5280] [django.db.backends:90] [DEBUG]- (0.034) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-05 15:05:12,962 [Thread-2:2432] [django.server:124] [ERROR]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 500 101132
+2019-03-05 15:05:57,961 [Thread-4:15204] [django.server:124] [ERROR]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 500 101267
+2019-03-05 15:08:42,287 [Dummy-1:14796] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-05 15:08:42,308 [Dummy-1:14796] [django.db.backends:90] [DEBUG]- (0.017) SELECT VERSION(); args=None
+2019-03-05 15:08:42,708 [Dummy-1:14796] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-03-05 15:08:42,712 [Dummy-1:14796] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-05 15:08:48,328 [Thread-2:14536] [django.server:124] [ERROR]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 500 93117
+2019-03-05 15:11:04,253 [Dummy-1:15268] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-05 15:11:04,290 [Dummy-1:15268] [django.db.backends:90] [DEBUG]- (0.037) SELECT VERSION(); args=None
+2019-03-05 15:11:04,712 [Dummy-1:15268] [django.db.backends:90] [DEBUG]- (0.004) SHOW FULL TABLES; args=None
+2019-03-05 15:11:04,715 [Dummy-1:15268] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-05 17:46:53,304 [Dummy-1:15976] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-05 17:46:53,325 [Dummy-1:15976] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-03-05 17:47:02,140 [Dummy-1:15976] [django.db.backends:90] [DEBUG]- (0.020) SHOW FULL TABLES; args=None
+2019-03-05 17:47:02,179 [Dummy-1:15976] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-05 17:47:14,264 [Thread-2:16092] [django.server:124] [INFO]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 200 0
+2019-03-05 17:47:14,276 [Thread-2:16092] [django.server:124] [ERROR]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 500 59
+2019-03-05 17:47:14,325 [Thread-3:10116] [django.server:124] [INFO]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 200 0
+2019-03-05 17:47:14,326 [Thread-3:10116] [django.server:124] [ERROR]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 500 59
+2019-03-05 17:47:14,339 [Thread-4:14620] [django.server:124] [INFO]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 200 0
+2019-03-05 17:47:14,340 [Thread-4:14620] [django.server:124] [ERROR]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 500 59
+2019-03-05 17:47:14,577 [Thread-5:15128] [django.server:124] [INFO]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 200 0
+2019-03-05 17:47:14,578 [Thread-5:15128] [django.server:124] [ERROR]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 500 59
+2019-03-05 17:47:14,582 [Thread-6:12728] [django.server:124] [INFO]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 200 0
+2019-03-05 17:47:14,583 [Thread-6:12728] [django.server:124] [ERROR]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 500 59
+2019-03-05 17:47:14,590 [Thread-7:15236] [django.server:124] [INFO]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 200 0
+2019-03-05 17:47:14,590 [Thread-7:15236] [django.server:124] [ERROR]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 500 59
+2019-03-05 17:47:19,609 [Thread-8:7128] [django.server:124] [INFO]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 200 0
+2019-03-05 17:47:19,611 [Thread-8:7128] [django.server:124] [ERROR]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 500 59
+2019-03-05 17:47:19,619 [Thread-9:15952] [django.server:124] [INFO]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 200 0
+2019-03-05 17:47:19,620 [Thread-9:15952] [django.server:124] [ERROR]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 500 59
+2019-03-05 17:47:19,624 [Thread-10:14288] [django.server:124] [INFO]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 200 0
+2019-03-05 17:47:19,625 [Thread-10:14288] [django.server:124] [ERROR]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 500 59
+2019-03-05 17:49:00,402 [Dummy-1:12104] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-05 17:49:00,403 [Dummy-1:12104] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-03-05 17:50:04,873 [Dummy-1:4544] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-05 17:50:04,875 [Dummy-1:4544] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-03-05 17:50:05,204 [Dummy-1:4544] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-03-05 17:50:05,218 [Dummy-1:4544] [django.db.backends:90] [DEBUG]- (0.012) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-05 17:50:08,652 [Thread-2:9124] [django.server:124] [INFO]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 200 0
+2019-03-05 17:50:08,654 [Thread-2:9124] [django.server:124] [ERROR]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 500 59
+2019-03-05 17:50:08,658 [Thread-3:15600] [django.server:124] [INFO]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 200 0
+2019-03-05 17:50:08,659 [Thread-3:15600] [django.server:124] [ERROR]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 500 59
+2019-03-05 17:50:08,662 [Thread-4:12884] [django.server:124] [INFO]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 200 0
+2019-03-05 17:50:08,663 [Thread-4:12884] [django.server:124] [ERROR]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 500 59
+2019-03-05 17:50:10,905 [Thread-5:14956] [django.server:124] [INFO]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 200 0
+2019-03-05 17:50:10,906 [Thread-5:14956] [django.server:124] [ERROR]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 500 59
+2019-03-05 17:50:10,910 [Thread-6:14384] [django.server:124] [INFO]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 200 0
+2019-03-05 17:50:10,911 [Thread-6:14384] [django.server:124] [ERROR]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 500 59
+2019-03-05 17:50:10,919 [Thread-7:13248] [django.server:124] [INFO]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 200 0
+2019-03-05 17:50:10,920 [Thread-7:13248] [django.server:124] [ERROR]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 500 59
+2019-03-05 17:52:04,038 [Thread-8:10504] [django.server:124] [INFO]- "GET /app1/downloadfile?file_name=a.txt HTTP/1.1" 200 285
+2019-03-05 17:52:29,224 [Thread-10:13724] [django.server:124] [INFO]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 200 0
+2019-03-05 17:52:29,228 [Thread-10:13724] [django.server:124] [ERROR]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 500 59
+2019-03-05 17:52:29,238 [Thread-11:11508] [django.server:124] [INFO]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 200 0
+2019-03-05 17:52:29,238 [Thread-11:11508] [django.server:124] [ERROR]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 500 59
+2019-03-05 17:52:29,242 [Thread-12:8268] [django.server:124] [INFO]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 200 0
+2019-03-05 17:52:29,243 [Thread-12:8268] [django.server:124] [ERROR]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 500 59

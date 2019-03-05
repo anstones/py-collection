@@ -30,6 +30,14 @@ for word, freq in word_freq[:10]:
 count_sort = sorted(count.items(), key=lambda x: x[1], reverse=True)
 for freq in count_sort[:10]:
     print(freq)
+
+
+result = defaultdict(int)
+with open(file_path) as f:
+    for line in f:
+        for word in filter(None,line.strip().split(' ')):
+            result['word'] += 1
+    print(sorted(result.items(), key=lambda(x,y):y, reverse=True))[:10]
     
 
 
