@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- encoding: utf-8 -*-
+
 import heapq
 
 from collections import defaultdict,OrderedDict
@@ -152,12 +155,3 @@ def compute_cost(records):
         s = Stock(*rec)
         total += s.shares * s.price
     return total
-
-
-s = "Look into my eyes, look into my eyes, the eyes, the eyes, \
-the eyes, not around the eyes, don't look around the eyes, \
-look into my eyes, you're under."
-
-import textwrap
-# 指定列宽
-print(textwrap.fill(s, 30))
