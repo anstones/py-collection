@@ -1249,3 +1249,9 @@ django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<Reg
 2019-03-07 09:45:11,907 [Dummy-1:10636] [django.db.backends:90] [DEBUG]- (0.009) SELECT VERSION(); args=None
 2019-03-07 09:45:12,334 [Dummy-1:10636] [django.db.backends:90] [DEBUG]- (0.014) SHOW FULL TABLES; args=None
 2019-03-07 09:45:12,348 [Dummy-1:10636] [django.db.backends:90] [DEBUG]- (0.012) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-07 09:45:29,593 [Thread-2:11580] [django.server:124] [INFO]- "GET /app1/uploadfile HTTP/1.1" 200 1651
+2019-03-07 09:45:45,959 [Thread-4:15856] [django:82] [DEBUG]- destination is <_io.BufferedWriter name='C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\/../static\\Snipaste_2019-03-06_09-08-28.png'>
+2019-03-07 09:45:45,963 [Thread-4:15856] [django:82] [DEBUG]- destination is <_io.BufferedWriter name='C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\/../static\\Snipaste_2019-03-06_09-08-39.png'>
+2019-03-07 09:45:45,967 [Thread-4:15856] [django:82] [DEBUG]- destination is <_io.BufferedWriter name='C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\/../static\\Snipaste_2019-03-06_09-15-28.png'>
+2019-03-07 09:45:46,249 [Thread-4:15856] [django.server:124] [INFO]- "POST /app1/savefile HTTP/1.1" 200 9836
+2019-03-07 09:45:46,880 [Thread-5:11324] [django.server:124] [WARNING]- "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1733
