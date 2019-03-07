@@ -1,0 +1,23 @@
+select count(*) as count,
+       (
+       CASE 
+       WHEN ROUND(DATEDIFF(CURDATE(), birth)/365.2422) >= 0 and ROUND(DATEDIFF(CURDATE(), birth)/365.2422) <= 12 THEN '0'
+       WHEN ROUND(DATEDIFF(CURDATE(), birth)/365.2422) > 10 and ROUND(DATEDIFF(CURDATE(), birth)/365.2422) <= 18 THEN '10'
+       WHEN ROUND(DATEDIFF(CURDATE(), birth)/365.2422) > 18 and ROUND(DATEDIFF(CURDATE(), birth)/365.2422) <= 30 THEN '18'
+       WHEN ROUND(DATEDIFF(CURDATE(), birth)/365.2422) > 30 and ROUND(DATEDIFF(CURDATE(), birth)/365.2422) <= 50 THEN '30'
+       WHEN ROUND(DATEDIFF(CURDATE(), birth)/365.2422) > 50 and ROUND(DATEDIFF(CURDATE(), birth)/365.2422) <= 70 THEN '50'
+       WHEN ROUND(DATEDIFF(CURDATE(), birth)/365.2422) > 70 THEN '70'
+       END 
+       ) as ageRange
+       , sex
+from tp_house_user WHERE province_code=520000 AND city_code=520600 and unit_id=3522 and birth is not NULL
+GROUP BY 
+       CASE 
+       WHEN ROUND(DATEDIFF(CURDATE(), birth)/365.2422) >= 0 and ROUND(DATEDIFF(CURDATE(), birth)/365.2422) <= 10 THEN '0'
+       WHEN ROUND(DATEDIFF(CURDATE(), birth)/365.2422) > 10 and ROUND(DATEDIFF(CURDATE(), birth)/365.2422) <= 18 THEN '10'
+       WHEN ROUND(DATEDIFF(CURDATE(), birth)/365.2422) > 18 and ROUND(DATEDIFF(CURDATE(), birth)/365.2422) <= 30 THEN '18'
+       WHEN ROUND(DATEDIFF(CURDATE(), birth)/365.2422) > 30 and ROUND(DATEDIFF(CURDATE(), birth)/365.2422) <= 50 THEN '30'
+       WHEN ROUND(DATEDIFF(CURDATE(), birth)/365.2422) > 50 and ROUND(DATEDIFF(CURDATE(), birth)/365.2422) <= 70 THEN '50'
+       WHEN ROUND(DATEDIFF(CURDATE(), birth)/365.2422) > 60 THEN '70'
+       END
+,sex
