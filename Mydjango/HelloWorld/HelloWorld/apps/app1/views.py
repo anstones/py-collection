@@ -1,9 +1,11 @@
 from django.http import HttpResponse
 from .models import Publish
+from django.shortcuts import HttpResponse, render, redirect
 from rest_framework.views import APIView
 from rest_framework import serializers
 from rest_framework.response import Response
 from django.http import StreamingHttpResponse
+from django.http import HttpResponseRedirect
 import logging
 import os
 
@@ -63,3 +65,23 @@ class DownloadFile(APIView):
                     break
     
     
+class UploadFile(APIView):
+
+    def get(self,request):
+        return render(request, 'upload.html')
+
+
+class SaveFile(APIView):
+    def post(self,request):
+        if request.POST:
+            img_file = request.FILES.getlist("image")
+            print(img_file)
+        for f in img_file:
+            the_file_name = BASE_DIR + os.sep + "/../" + 'static' + os.sep + f.name
+            destination = open(the_file_name, 'wb')
+            logger.debug("destination is {}".format(destination))
+            for chunk in f.chunks():
+                destination.write(chunk)
+            destination.close()
+ 
+        return Response({"message":'上传成功'})

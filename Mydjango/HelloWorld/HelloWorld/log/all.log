@@ -710,3 +710,542 @@ django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in "
 2019-03-05 18:20:38,739 [Dummy-1:7964] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
 2019-03-05 18:20:39,126 [Dummy-1:7964] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
 2019-03-05 18:20:39,129 [Dummy-1:7964] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-05 18:21:14,325 [Thread-2:4772] [django.server:124] [INFO]- "GET /app1/downloadfile?file_name=a.zip HTTP/1.1" 200 1186919
+2019-03-05 18:23:28,942 [Thread-4:7564] [django.server:124] [INFO]- "GET /app1/downloadfile?file_name=a.txt HTTP/1.1" 200 293
+2019-03-06 10:16:51,876 [Dummy-1:8556] [django.db.backends:90] [DEBUG]- (0.070) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-06 10:16:51,905 [Dummy-1:8556] [django.db.backends:90] [DEBUG]- (0.010) SELECT VERSION(); args=None
+2019-03-06 10:18:41,937 [Dummy-1:10448] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-06 10:18:41,944 [Dummy-1:10448] [django.db.backends:90] [DEBUG]- (0.007) SELECT VERSION(); args=None
+2019-03-06 10:18:42,936 [Dummy-1:10448] [django.db.backends:90] [DEBUG]- (0.306) SHOW FULL TABLES; args=None
+2019-03-06 10:18:43,342 [Dummy-1:10448] [django.db.backends:90] [DEBUG]- (0.295) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-06 10:19:13,996 [Thread-2:14816] [django:30] [DEBUG]- request ip '127.0.0.1'
+2019-03-06 10:19:14,092 [Thread-2:14816] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-06 10:19:14,239 [Thread-2:14816] [django.db.backends:90] [DEBUG]- (0.148) SELECT `app1_publish`.`nid`, `app1_publish`.`name`, `app1_publish`.`city`, `app1_publish`.`email` FROM `app1_publish`; args=()
+2019-03-06 10:19:14,740 [Thread-2:14816] [django.server:124] [INFO]- "GET /app1/publishes HTTP/1.1" 200 11106
+2019-03-06 10:19:15,352 [Thread-3:5080] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app1.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\app1\\urls.py'> (None:None) ^app1/>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/$>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/(?P<pk>[0-9]+)/$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2019-03-06 10:19:15,451 [Thread-3:5080] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app1.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\app1\\urls.py'> (None:None) ^app1/>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/$>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/(?P<pk>[0-9]+)/$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'app1.urls' from 'C:\\\\Users\\\\Administrator\\\\Desktop\\\\mine\\\\Project\\\\project\\\\Mydjango\\\\HelloWorld\\\\HelloWorld\\\\apps\\\\app1\\\\urls.py'> (None:None) ^app1/>"
+2019-03-06 10:19:15,467 [Thread-3:5080] [django.server:124] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 2411
+2019-03-06 10:19:32,118 [Thread-4:7488] [django.server:124] [ERROR]- "GET /app1/downloadfile HTTP/1.1" 500 100712
+2019-03-06 10:19:43,491 [Thread-6:16364] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app1.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\app1\\urls.py'> (None:None) ^app1/>, <RegexURLPattern None ^publishes>], [<RegexURLResolver <module 'app1.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\app1\\urls.py'> (None:None) ^app1/>, <RegexURLPattern None ^downloadfile>], [<RegexURLResolver <module 'app1.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\app1\\urls.py'> (None:None) ^app1/>, <RegexURLPattern None ^uploadfile>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/$>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/(?P<pk>[0-9]+)/$>]], 'path': 'app1/upload'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2019-03-06 10:19:43,494 [Thread-6:16364] [django.server:124] [WARNING]- "GET /app1/upload HTTP/1.1" 404 2798
+2019-03-06 10:20:04,664 [Thread-8:6368] [django.server:124] [WARNING]- "GET /app1/uploadfile HTTP/1.1" 405 9888
+2019-03-06 10:22:07,962 [Dummy-1:6840] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-06 10:22:07,962 [Dummy-1:6840] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-03-06 10:22:08,268 [Dummy-1:6840] [django.db.backends:90] [DEBUG]- (0.016) SHOW FULL TABLES; args=None
+2019-03-06 10:22:08,294 [Dummy-1:6840] [django.db.backends:90] [DEBUG]- (0.024) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-06 10:22:20,163 [Thread-2:14500] [django.server:124] [WARNING]- "GET /app1/upload.html HTTP/1.1" 405 9892
+2019-03-06 10:22:24,917 [Thread-3:12704] [django.server:124] [WARNING]- "GET /app1/upload.html HTTP/1.1" 405 9892
+2019-03-06 10:22:27,046 [Thread-4:11844] [django.server:124] [WARNING]- "GET /app1/upload.html HTTP/1.1" 405 9892
+2019-03-06 10:27:46,180 [Dummy-1:13136] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-06 10:27:46,181 [Dummy-1:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-03-06 10:27:46,492 [Dummy-1:13136] [django.db.backends:90] [DEBUG]- (0.013) SHOW FULL TABLES; args=None
+2019-03-06 10:27:46,496 [Dummy-1:13136] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-06 10:29:07,155 [Dummy-1:14500] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-06 10:29:07,156 [Dummy-1:14500] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-03-06 10:30:13,717 [Dummy-1:14480] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-06 10:30:13,718 [Dummy-1:14480] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-03-06 10:35:36,131 [Dummy-1:12224] [django.db.backends:90] [DEBUG]- (0.009) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-06 10:35:36,132 [Dummy-1:12224] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-03-06 10:35:36,596 [Dummy-1:12224] [django.db.backends:90] [DEBUG]- (0.044) SHOW FULL TABLES; args=None
+2019-03-06 10:35:36,605 [Dummy-1:12224] [django.db.backends:90] [DEBUG]- (0.003) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-06 10:35:42,594 [Thread-2:2276] [django.server:124] [ERROR]- "GET /app1/uploadfile HTTP/1.1" 500 144375
+2019-03-06 10:37:08,937 [Dummy-1:12068] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-06 10:37:08,938 [Dummy-1:12068] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-03-06 10:37:09,535 [Dummy-1:12068] [django.db.backends:90] [DEBUG]- (0.007) SHOW FULL TABLES; args=None
+2019-03-06 10:37:09,549 [Dummy-1:12068] [django.db.backends:90] [DEBUG]- (0.012) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-06 10:37:12,974 [Thread-2:7372] [django.server:124] [ERROR]- "GET /app1/uploadfile HTTP/1.1" 500 144375
+2019-03-06 13:38:46,068 [Dummy-1:9780] [django.db.backends:90] [DEBUG]- (0.002) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-06 13:38:46,069 [Dummy-1:9780] [django.db.backends:90] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2019-03-06 13:38:46,515 [Dummy-1:9780] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-03-06 13:38:46,518 [Dummy-1:9780] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-06 13:38:51,939 [Thread-2:9180] [django.server:124] [INFO]- "GET /app1/uploadfile HTTP/1.1" 200 1658
+2019-03-06 13:42:37,152 [Dummy-1:15172] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-06 13:42:37,154 [Dummy-1:15172] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-03-06 13:42:37,436 [Dummy-1:15172] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2019-03-06 13:42:37,441 [Dummy-1:15172] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-07 09:27:22,655 [Dummy-1:12636] [django.db.backends:90] [DEBUG]- (0.010) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-07 09:27:22,681 [Dummy-1:12636] [django.db.backends:90] [DEBUG]- (0.017) SELECT VERSION(); args=None
+2019-03-07 09:27:28,682 [Dummy-1:12636] [django.db.backends:90] [DEBUG]- (0.118) SHOW FULL TABLES; args=None
+2019-03-07 09:27:28,795 [Dummy-1:12636] [django.db.backends:90] [DEBUG]- (0.070) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-07 09:27:53,720 [Thread-2:5876] [django.server:124] [INFO]- "GET /app1/uploadfile HTTP/1.1" 200 1652
+2019-03-07 09:27:54,149 [Thread-3:16832] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app1.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\app1\\urls.py'> (None:None) ^app1/>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/$>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/(?P<pk>[0-9]+)/$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2019-03-07 09:27:54,218 [Thread-3:16832] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app1.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\app1\\urls.py'> (None:None) ^app1/>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/$>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/(?P<pk>[0-9]+)/$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'app1.urls' from 'C:\\\\Users\\\\Administrator\\\\Desktop\\\\mine\\\\Project\\\\project\\\\Mydjango\\\\HelloWorld\\\\HelloWorld\\\\apps\\\\app1\\\\urls.py'> (None:None) ^app1/>"
+2019-03-07 09:27:54,230 [Thread-3:16832] [django.server:124] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 2411
+2019-03-07 09:32:10,834 [Dummy-1:14816] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-07 09:32:10,835 [Dummy-1:14816] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-03-07 09:32:11,181 [Dummy-1:14816] [django.db.backends:90] [DEBUG]- (0.003) SHOW FULL TABLES; args=None
+2019-03-07 09:32:11,222 [Dummy-1:14816] [django.db.backends:90] [DEBUG]- (0.038) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-07 09:32:25,471 [Thread-2:14888] [django.server:124] [INFO]- "GET /app1/uploadfile HTTP/1.1" 200 1652
+2019-03-07 09:33:13,958 [Dummy-1:7176] [django.db.backends:90] [DEBUG]- (0.010) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-07 09:33:13,962 [Dummy-1:7176] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-03-07 09:33:14,372 [Dummy-1:7176] [django.db.backends:90] [DEBUG]- (0.116) SHOW FULL TABLES; args=None
+2019-03-07 09:33:14,425 [Dummy-1:7176] [django.db.backends:90] [DEBUG]- (0.045) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-07 09:33:18,022 [Thread-2:16592] [django.server:124] [INFO]- "GET /app1/uploadfile HTTP/1.1" 200 1652
+2019-03-07 09:38:43,940 [Dummy-1:12268] [django.db.backends:90] [DEBUG]- (0.003) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-07 09:38:43,943 [Dummy-1:12268] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-03-07 09:38:55,350 [Dummy-1:6780] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-07 09:38:55,353 [Dummy-1:6780] [django.db.backends:90] [DEBUG]- (0.002) SELECT VERSION(); args=None
+2019-03-07 09:38:55,644 [Dummy-1:6780] [django.db.backends:90] [DEBUG]- (0.004) SHOW FULL TABLES; args=None
+2019-03-07 09:38:55,667 [Dummy-1:6780] [django.db.backends:90] [DEBUG]- (0.019) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-07 09:39:09,230 [Thread-2:12936] [django.server:124] [INFO]- "GET /app1/uploadfile HTTP/1.1" 200 1646
+2019-03-07 09:39:19,698 [Thread-4:11056] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app1.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\app1\\urls.py'> (None:None) ^app1/>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/$>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/(?P<pk>[0-9]+)/$>]], 'path': 'savefile'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2019-03-07 09:39:19,700 [Thread-4:11056] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app1.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\app1\\urls.py'> (None:None) ^app1/>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/$>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/(?P<pk>[0-9]+)/$>]], 'path': 'savefile'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'app1.urls' from 'C:\\\\Users\\\\Administrator\\\\Desktop\\\\mine\\\\Project\\\\project\\\\Mydjango\\\\HelloWorld\\\\HelloWorld\\\\apps\\\\app1\\\\urls.py'> (None:None) ^app1/>"
+2019-03-07 09:39:19,703 [Thread-4:11056] [django.server:124] [WARNING]- "POST /savefile HTTP/1.1" 404 2403
+2019-03-07 09:39:19,708 [Thread-5:11532] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app1.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\app1\\urls.py'> (None:None) ^app1/>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/$>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/(?P<pk>[0-9]+)/$>]], 'path': 'savefile'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2019-03-07 09:39:19,710 [Thread-5:11532] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app1.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\app1\\urls.py'> (None:None) ^app1/>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/$>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/(?P<pk>[0-9]+)/$>]], 'path': 'savefile'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'app1.urls' from 'C:\\\\Users\\\\Administrator\\\\Desktop\\\\mine\\\\Project\\\\project\\\\Mydjango\\\\HelloWorld\\\\HelloWorld\\\\apps\\\\app1\\\\urls.py'> (None:None) ^app1/>"
+2019-03-07 09:39:19,712 [Thread-5:11532] [django.server:124] [WARNING]- "POST /savefile HTTP/1.1" 404 2403
+2019-03-07 09:39:19,724 [Thread-6:15256] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app1.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\app1\\urls.py'> (None:None) ^app1/>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/$>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/(?P<pk>[0-9]+)/$>]], 'path': 'savefile'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2019-03-07 09:39:19,726 [Thread-6:15256] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app1.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\app1\\urls.py'> (None:None) ^app1/>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/$>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/(?P<pk>[0-9]+)/$>]], 'path': 'savefile'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'app1.urls' from 'C:\\\\Users\\\\Administrator\\\\Desktop\\\\mine\\\\Project\\\\project\\\\Mydjango\\\\HelloWorld\\\\HelloWorld\\\\apps\\\\app1\\\\urls.py'> (None:None) ^app1/>"
+2019-03-07 09:39:19,727 [Thread-6:15256] [django.server:124] [WARNING]- "POST /savefile HTTP/1.1" 404 2403
+2019-03-07 09:40:12,710 [Dummy-1:9440] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-07 09:40:12,726 [Dummy-1:9440] [django.db.backends:90] [DEBUG]- (0.015) SELECT VERSION(); args=None
+2019-03-07 09:40:12,987 [Dummy-1:9440] [django.db.backends:90] [DEBUG]- (0.030) SHOW FULL TABLES; args=None
+2019-03-07 09:40:13,018 [Dummy-1:9440] [django.db.backends:90] [DEBUG]- (0.029) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-07 09:40:18,689 [Thread-2:15460] [django.server:124] [INFO]- "GET /app1/uploadfile HTTP/1.1" 200 1651
+2019-03-07 09:40:29,873 [Thread-4:12268] [django.server:124] [ERROR]- "POST /app1/savefile HTTP/1.1" 500 95278
+2019-03-07 09:44:09,829 [Dummy-1:5540] [django.db.backends:90] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-07 09:44:09,830 [Dummy-1:5540] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2019-03-07 09:44:10,246 [Dummy-1:5540] [django.db.backends:90] [DEBUG]- (0.101) SHOW FULL TABLES; args=None
+2019-03-07 09:44:10,254 [Dummy-1:5540] [django.db.backends:90] [DEBUG]- (0.007) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-03-07 09:44:22,514 [Thread-2:12056] [django.server:124] [INFO]- "GET /app1/uploadfile HTTP/1.1" 200 1651
+2019-03-07 09:44:33,382 [Thread-4:13300] [django:82] [DEBUG]- destination is <_io.BufferedWriter name='C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\/../static\\Snipaste_2019-03-06_09-08-28.png'>
+2019-03-07 09:44:33,386 [Thread-4:13300] [django:82] [DEBUG]- destination is <_io.BufferedWriter name='C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\/../static\\Snipaste_2019-03-06_09-08-39.png'>
+2019-03-07 09:44:33,393 [Thread-4:13300] [django.server:124] [INFO]- "POST /app1/savefile HTTP/1.1" 302 0
+2019-03-07 09:44:33,414 [Thread-5:13424] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'app1.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\app1\\urls.py'> (None:None) ^app1/>, <RegexURLPattern None ^publishes>], [<RegexURLResolver <module 'app1.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\app1\\urls.py'> (None:None) ^app1/>, <RegexURLPattern None ^downloadfile>], [<RegexURLResolver <module 'app1.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\app1\\urls.py'> (None:None) ^app1/>, <RegexURLPattern None ^uploadfile>], [<RegexURLResolver <module 'app1.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\app1\\urls.py'> (None:None) ^app1/>, <RegexURLPattern None ^savefile>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/$>], [<RegexURLResolver <module 'snippets.urls' from 'C:\\Users\\Administrator\\Desktop\\mine\\Project\\project\\Mydjango\\HelloWorld\\HelloWorld\\apps\\snippets\\urls.py'> (None:None) ^>, <RegexURLPattern None ^snippets/(?P<pk>[0-9]+)/$>]], 'path': "app1/{'message': '上传成功'}"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2019-03-07 09:44:33,442 [Thread-5:13424] [django.server:124] [WARNING]- "GET /app1/%7B'message':%20'%E4%B8%8A%E4%BC%A0%E6%88%90%E5%8A%9F'%7D HTTP/1.1" 404 3101
+2019-03-07 09:45:11,898 [Dummy-1:10636] [django.db.backends:90] [DEBUG]- (0.005) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-03-07 09:45:11,907 [Dummy-1:10636] [django.db.backends:90] [DEBUG]- (0.009) SELECT VERSION(); args=None
+2019-03-07 09:45:12,334 [Dummy-1:10636] [django.db.backends:90] [DEBUG]- (0.014) SHOW FULL TABLES; args=None
+2019-03-07 09:45:12,348 [Dummy-1:10636] [django.db.backends:90] [DEBUG]- (0.012) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()

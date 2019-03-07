@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form  method="post" action="/app1/savefile" enctype="multipart/form-data">
+        <label for="name">姓  名：</label> <input type="text" placeholder="请输入姓名" id="name" name="name"/><br>
+        <label for="number">编  号：</label> <input type="number" placeholder="请输入编号" id="number" name="number"/><br>
+        <label for="idNum">部  门：</label>
+            <select name="dep">
+                <option value="技术部">技术部</option>
+                <option value="行政部">行政部</option>
+                <option value="销售部">销售部</option>
+                <option value="董事会">董事会</option>
+                <option value="访客">访客</option>
+            </select><br>
+        <label for="picture">照  片：</label>
+        <span id="file_warp">
+            <!-- <input type="button" id="button" name="button" value="选择文件" class="addbtn"/> 单张上传 -->
+            <input type="file" name="image" id="file" style="z-index: 1" onchange="getPhoto(this)"/>
+            <input type="file" name="image" id="file" style="z-index: 1" onchange="getPhoto(this)"/>
+            <input type="file" name="image" id="file" style="z-index: 1" onchange="getPhoto(this)"/>
+        </span><span>（至少1张至多5张）</span><br>
+        <div class="img_wrap"></div>
+    
+        <input type="submit" value="确认" id="submit" class="confirm sub"/>
+        <input type="reset" value="重置" id="reset" style="margin-left: 80px;"/>
+    </form>
+</body>
+</html>
