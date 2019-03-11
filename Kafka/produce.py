@@ -6,7 +6,7 @@ from kafka import KafkaProducer
 
 
 def produce():
-    producer = KafkaProducer(bootstrap_servers='localhost:9092')
+    producer = KafkaProducer(bootstrap_servers='192.168.160.128:9092')
     for i in range(2):
         msg_dict = {
             "db_config": {
