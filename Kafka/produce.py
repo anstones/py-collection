@@ -35,3 +35,12 @@ def to_str(bytes_or_str):
 
 if __name__ == '__main__':
     produce()
+
+# pykafka 连接kafka 生产消息
+from pykafka import KafkaClient
+
+client = KafkaClient(hosts="192.168.160.128:9092")
+topic=client.topics['wk']  # 创建一个topic 名称为“wk”
+producer = topic.get_producer()
+producer.produce(b'test')   # 生产一个消息数据
+producer.stop()
