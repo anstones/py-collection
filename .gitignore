@@ -1,2 +1,10 @@
 *.pyc
+*.log
+.vscode/
+.vscode/*
+.idea/*
+.idea
+*/.idea/*
+tests/
 __pycache__/
+_local*.conf
