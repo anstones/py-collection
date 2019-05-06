@@ -37,7 +37,7 @@ with open(file_path) as f:
     for line in f:
         for word in filter(None,line.strip().split(' ')):
             result['word'] += 1
-    print(sorted(result.items(), key=lambda(x,y):y, reverse=True))[:10]
+print(sorted(result.items(), key=lambda(x,y):y, reverse=True))[:10]
     
 
 
