@@ -36,6 +36,5 @@ def hasthread():
 
 
 nothread()
-hasthread() 
-
+hasthread()
     
