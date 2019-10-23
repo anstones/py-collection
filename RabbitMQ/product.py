@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-
+import time
 import pika
 # ######################### 生产者 #########################
 credentials = pika.PlainCredentials('oeasy', 'oeasy')
@@ -13,10 +13,12 @@ channel.queue_declare(queue='wzg')
 #exchange -- 它使我们能够确切地指定消息应该到哪个队列去。
 #向队列插入数值 routing_key是队列名 body是要插入的内容
 
-channel.basic_publish(exchange='',
-                  routing_key='wzg',
-                  body='Hello World!')
-print("开始队列")
+for i in range(100):
+    channel.basic_publish(exchange='',
+                    routing_key='wzg',
+                    body='Hello World {}'.format(i))
+    print("开始队列{}".format(i))
+    time.sleep(1)
 #缓冲区已经flush而且消息已经确认发送到了RabbitMQ中，关闭链接
 connection.close()
 
