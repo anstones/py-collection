@@ -3,9 +3,8 @@ import sys
 import pika
 # 支持消息确认
 
-
-parameters = pika.URLParameters('amqp://test:test@192.168.160.128:5672/%2F')
-connection = pika.BlockingConnection(parameters)
+credentials = pika.PlainCredentials('oeasy', 'oeasy')
+connection = pika.BlockingConnection(pika.ConnectionParameters('192.168.133.128', 5672, '/', credentials))
 channel = connection.channel()
 
 # 接收确认消息
@@ -19,9 +18,5 @@ else:
     msg = 'hah'
 
 props = pika.BasicProperties(content_type='text/plain', delivery_mode=2)
-if channel.basic_publish('web_develop', 'xxx_routing_key', msg,
-                         properties=props):
-    print('Message publish was confirmed!')
-else:
-    print('Message could not be confirmed!')
-connection.close()  # 关闭连接
+channel.basic_publish('web_develop', 'xxx_routing_key', msg, properties=props)
+# connection.close()  # 关闭连接
