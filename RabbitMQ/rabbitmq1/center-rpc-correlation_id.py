@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 
-import pika, threading, uuid, time
+import pika, threading, uuid, time, random
 
 # 自定义线程类，继承threading.Thread
 class MyThread(threading.Thread):
@@ -25,15 +25,16 @@ class Center():
         result = self.channel.queue_declare("", exclusive=True)
         self.callback_queue = result.method.queue
 
-        self.channel.basic_consume(
-                                    on_message_callback= self.on_response,
-                                    queue=self.callback_queue,
-                                    auto_ack=True)
+        self.channel.basic_consume(on_message_callback=self.on_response,
+                                    auto_ack=True,
+                                    queue=self.callback_queue)
+        
         self.response = {}
 
     # 定义接收到返回消息的处理方法
     def on_response(self, ch, method, props, body):
         self.response[props.correlation_id] = body
+        print(self.response)
 
     def request(self, n):
         corr_id = str(uuid.uuid4())
@@ -49,17 +50,18 @@ class Center():
             body=str(n))
 
         #接收返回的数据
-        if self.response[corr_id] is None:
+        while self.response[corr_id] is None:
             self.connection.process_data_events()
+            time.sleep(random.randint(3, 5))
         return int(self.response[corr_id])
 
 center = Center()
 #发起5次计算请求
-nums= [10,20]
+nums= [10, 20]
 threads = []
 for num in nums:
-    # threads.append(MyThread(center.request, num))
-    threads.append(threading.Thread(target=center.request, args=(num,)))
+    threads.append(MyThread(center.request, num))
+    # threads.append(threading.Thread(target=center.request, args=(num,)))
 for thread in threads:
     thread.start()
 for thread in threads:
