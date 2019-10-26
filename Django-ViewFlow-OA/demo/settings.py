@@ -48,7 +48,7 @@ INSTALLED_APPS = (
     #'demo.shipment',
 )
 
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -70,7 +70,8 @@ import dj_database_url  # NOQA
 DATABASES = {
     'default': dj_database_url.config() or {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db{}{}.sqlite3'.format(*django.VERSION[:2])),
+        # 'NAME': os.path.join(BASE_DIR, 'db{}{}.sqlite3'.format(*django.VERSION[:2])),
+        'NAME': os.path.join(BASE_DIR, 'db111.sqlite3'),
     }
 }
 
