@@ -8,15 +8,25 @@ import traceback
 import json
 import time
 import sys
-import threading
+import os
 
+from core.msg_center import MsgCenter
+from core.rabbitmq_client import RabbitmqClient
+from core.mq_center import MQHandler
+from lib.lconf import Lconf
+from lib.logger import logger
+from lib.utils import common_response
 
-from .msg_center import MsgCenter
-from .rabbitmq_client import RabbitmqClient, MQHandler
-from .rect_center import RectCenter, FaceParams
+Global_lconf = Lconf()
+
 
 msg_center_inst_ = MsgCenter()
-mq_handler_inst_ = MQHandler()
+mq_handler_inst_ = MQHandler(Global_lconf.RmqHost, 
+                                Global_lconf.RmqPort, 
+                                Global_lconf.RmqVHost, 
+                                Global_lconf.RmqUser, 
+                                Global_lconf.RmqPassword
+                                )
 
 
 class CenterMsgHandler(web.RequestHandler):
@@ -26,8 +36,6 @@ class CenterMsgHandler(web.RequestHandler):
         self._handler = msg_center_inst_
         logger.error(traceback.format_exc())
 
-    def on_finish(self):
-        db_session.remove()
 
     @gen.coroutine
     def post(self):
@@ -37,8 +45,7 @@ class CenterMsgHandler(web.RequestHandler):
             res = self._handler.handler_msg(data)
         except:
             logger.error(traceback.format_exc())
-            db_session.rollback()
-            logger.info('rollback database')
+            logger.error('rollback database')
         self.write(res)
 
 
@@ -58,21 +65,17 @@ class Application(web.Application):
         web.Application.__init__(self, handlers, **settings)
 
 
-def common_response(result, info):
-    json_rst = {'result': result, 'info': info}
-    return json.dumps(json_rst)
-
-
 def start_rmq_listen():
     queue = sys.argv[1]
     n_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
     logger.info("%s Rabbitmq consumer start at the time: %s, the Queue is %s, %s", "*" * 10, n_time, queue, "*" * 10)
 
-    mq_conn = RabbitmqClient(Global_lconf.RmqHost,
-                             Global_lconf.RmqPort,
-                             Global_lconf.RmqVHost,
-                             Global_lconf.RmqUser,
-                             Global_lconf.RmqPassword)
+    mq_conn = RabbitmqClient(Global_lconf.RmqHost, 
+                                Global_lconf.RmqPort, 
+                                Global_lconf.RmqVHost, 
+                                Global_lconf.RmqUser, 
+                                Global_lconf.RmqPassword
+                                )
     mq_conn.start()
 
     while True:
@@ -92,7 +95,6 @@ def start_rmq_listen():
         except Exception as e:
             # logger.error(traceback.format_exc())
             logger.error("rabbitmq error: %s", str(e))
-            db_session.remove()
             time.sleep(5)
 
 
@@ -105,14 +107,14 @@ def start_http_listen():
 
 
 def main():
-    init_db()
-    tornado.options.parse_command_line()
+    # init_db() # 建表
+    tornado.options.parse_command_line() # 用于转换命令行的参数
 
     if "http_server" == Global_lconf.ServerType:
         start_http_listen()
     else:
         if not len(sys.argv) >= 2:
-            print("need to piont the queue of rqbbitmq")
+            logger.info("need to piont the queue of rqbbitmq")
         else:
             start_rmq_listen()
 

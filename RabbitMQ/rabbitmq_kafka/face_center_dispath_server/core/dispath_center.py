@@ -8,25 +8,23 @@ import json
 import traceback
 import hashlib
 
-from .rabbitmq_client import RabbitmqClient
+from core.rabbitmq_client import RabbitmqClient
+from lib.lconf import Lconf
+from lib.logger import logger
 
-RmqHost = "192.168.128.133"
-RmqPort = 5672
-RmqVHost = "oeasy_vhost_prod"
-RmqUser = "oeasy"
-RmqPassword = "oeasy"
-ConsumeQueueName = "ConsumeQueueName"
+Global_lconf = Lconf()
 
-exchanges_list = [("facecenter_worker_exchange", "face_center_1", "face_center_1"), 
-                    ("facecenter_worker_exchange", "face_center_2", "face_center_2"), 
-                    ("facecenter_worker_exchange", "face_center_3", "face_center_3"),
-                    ("facecenter_worker_exchange", "face_center_4", "face_center_4")]
 
 class DispatchCenter(object):
     def __init__(self):
-        self.exchanges = list(set(exchanges_list))
+        self.exchanges = list(set(Global_lconf.WorkExchanges))
         self.index = 0
-        self.rmq_client = RabbitmqClient(RmqHost, RmqPort, RmqVHost, RmqUser, RmqPassword)
+        self.rmq_client = RabbitmqClient(Global_lconf.RmqHost, 
+                                            Global_lconf.RmqPort, 
+                                            Global_lconf.RmqVHost, 
+                                            Global_lconf.RmqUser, 
+                                            Global_lconf.RmqPassword
+                                            )
         self.rmq_client.start()
         self._initilize_queue()
 
@@ -53,21 +51,21 @@ class DispatchCenter(object):
         """
         for i in range(3):
             try:
-                print("begin to publish msg to exchange {} routing_key {}, msg : {}".format(exchange, routing_key, str(msg)))
+                logger.info("begin to publish msg to exchange {} routing_key {}, msg : {}".format(exchange, routing_key, str(msg)))
                 self.rmq_client.channel.basic_publish(exchange, routing_key, msg)
-                print("publish msg done, msg {}".format(str(msg)))
+                logger.info("publish msg done, msg {}".format(str(msg)))
                 break
             except Exception as e:
-                print(traceback.format_exc())
-                print("publish msg error, msg {}".format(msg))
+                logger.error(traceback.format_exc())
+                logger.error("publish msg error, msg {}".format(msg))
 
     def rmq_callback(self, ch, method, properties, body):
         try:
-            print("get MQ message: " + body)
+            logger.info("get MQ message: " + body)
             start_time = time.time()
             self.handler_msg(json.loads(body))
-            print("MQ message process done, cost time: %s", time.time() - start_time)
+            logger.info("MQ message process done, cost time: %s", time.time() - start_time)
         except Exception as e:
-            print(traceback.format_exc())
-            print("MQ message exception")
+            logger.error(traceback.format_exc())
+            logger.error("MQ message exception")
             time.sleep(5)
