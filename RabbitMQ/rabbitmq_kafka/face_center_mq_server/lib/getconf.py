@@ -3,7 +3,7 @@ try:
 except:
     import ConfigParser
 import codecs
-path = './app.conf'
+path = './conf/app.conf'
 
 
 def getConfig(section, key):

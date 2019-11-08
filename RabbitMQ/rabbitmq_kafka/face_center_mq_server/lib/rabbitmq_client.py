@@ -5,6 +5,9 @@ import pika
 import threading
 import time
 
+from .lconf import Lconf
+
+global_lconf = Lconf()
 
 class RabbitmqClient(threading.Thread):
     def __init__(self, host, port, vhost, user, password, heartbeat_interval=None, blocked_connection_timeout=None):
@@ -22,7 +25,7 @@ class RabbitmqClient(threading.Thread):
         self._connection = pika.BlockingConnection(pika.ConnectionParameters(self.host,
                                                                        self.port,
                                                                        self.vhost,
-                                                                       heartbeat_interval=self.heartbeat_interval,
+                                                                       heartbeat=self.heartbeat_interval,
                                                                        blocked_connection_timeout=self.blocked_connection_timeout,
                                                                        credentials=pika.PlainCredentials(self.user, self.password)))
         self._channel = self._connection.channel()
@@ -50,7 +53,6 @@ class RabbitmqClient(threading.Thread):
         # 通道处于打开状态，直接返回
         if self._channel.is_open:
             return self._channel
-        
+ 
         self._channel = self.connection.channel()
         return self._channel
-        

@@ -11,22 +11,17 @@ import sys
 import os
 
 from core.msg_center import MsgCenter
-from core.rabbitmq_client import RabbitmqClient
 from core.mq_center import MQHandler
 from lib.lconf import Lconf
 from lib.logger import logger
 from lib.utils import common_response
+from lib.rabbitmq_client import RabbitmqClient
 
 Global_lconf = Lconf()
 
 
 msg_center_inst_ = MsgCenter()
-mq_handler_inst_ = MQHandler(Global_lconf.RmqHost, 
-                                Global_lconf.RmqPort, 
-                                Global_lconf.RmqVHost, 
-                                Global_lconf.RmqUser, 
-                                Global_lconf.RmqPassword
-                                )
+mq_handler_inst_ = MQHandler()
 
 
 class CenterMsgHandler(web.RequestHandler):
@@ -83,7 +78,7 @@ def start_rmq_listen():
 
             mq_conn.channel.queue_declare(queue=queue, durable=True)
             while True:
-                method, properties, body = mq_conn.channel.basic_get(queue=queue, no_ack=True)
+                method, properties, body = mq_conn.channel.basic_get(queue=queue, auto_ack=True)
                 if all((method, properties, body)):
                     mq_handler_inst_.mq_callback(mq_conn.channel, method, properties, body)
                 else:

@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package ws_push;
+
+// The WsPushHandler service definition.
+service WsPushHandler {
+    rpc PushToWsClient (WsPushRequest) returns (WsPushReply) {}
+}
+
+// The request message containing the data
+message WsPushRequest {
+    string area = 1;
+    string data = 2;
+}
+
+// The response message containing the result
+message WsPushReply {
+    string result = 1;
+}

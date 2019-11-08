@@ -27,11 +27,12 @@ def start_rmq_listen():
         try:
             # 声明消息队列，消息将在这个队列中进行传递。如果将消息发送到不存在的队列，rabbitmq将会自动清除这些消息。如果队列不存在，则创建
             rmq_client_.channel.queue_declare(queue=Global_lconf.ConsumeQueueName, durable=True)
+            logger.debug("==================================================================================")
             while True:
                 # basic_get 消费消息，同basic_consume
-                method, properties, body = rmq_client_.channel.basic_get(queue=Global_lconf.ConsumeQueueName, no_ack=True)
+                method, properties, body = rmq_client_.channel.basic_get(queue=Global_lconf.ConsumeQueueName, auto_ack=True)
+                logger.info("======= get info: {}".format(body))
                 if all((method, properties, body)):
-                    
                     dispatch_center_inst_.rmq_callback(rmq_client_.channel, method, properties, body)
                 else:
                     time.sleep(5)
@@ -42,4 +43,5 @@ def start_rmq_listen():
 
 
 def main():
+    print("============+++++++++++++++++++++++++++")
     start_rmq_listen()

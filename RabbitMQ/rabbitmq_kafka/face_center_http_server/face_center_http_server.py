@@ -11,22 +11,17 @@ import sys
 import os
 
 from core.msg_center import MsgCenter
-from core.rabbitmq_client import RabbitmqClient
 from core.mq_center import MQHandler
 from lib.lconf import Lconf
 from lib.logger import logger
 from lib.utils import common_response
+from lib.rabbitmq_client import RabbitmqClient
 
 Global_lconf = Lconf()
 
 
 msg_center_inst_ = MsgCenter()
-mq_handler_inst_ = MQHandler(Global_lconf.RmqHost, 
-                                Global_lconf.RmqPort, 
-                                Global_lconf.RmqVHost, 
-                                Global_lconf.RmqUser, 
-                                Global_lconf.RmqPassword
-                                )
+mq_handler_inst_ = MQHandler()
 
 
 class CenterMsgHandler(web.RequestHandler):

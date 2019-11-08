@@ -4,9 +4,9 @@ import time
 import json
 import traceback
 
-from .lconf import Lconf
-from .logger import logger
-from .rabbitmq_client import RabbitmqClient
+from lib.lconf import Lconf
+from lib.logger import logger
+from lib.rabbitmq_client import RabbitmqClient
 
 global_lconf = Lconf()
 

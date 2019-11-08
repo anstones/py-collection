@@ -23,3 +23,21 @@ def get_log_dir():
 def common_response(result, info):
     json_rst = {'result': result, 'info': info}
     return json.dumps(json_rst)
+
+def dev_format(devices):
+    if not isinstance(devices, list):
+        devices = [devices]
+    tmp = []
+    for dev in devices:
+        if dev == "":
+            continue
+        if len(dev) == len("0000000000_001122334455"):
+            tmp.append(dev.lower())  # mac地址小写
+        else:
+            tmp.append(dev)
+        if dev.startswith("0000003925"):  # 这两个小区可以互相识别
+            tmp.append(dev.replace("0000003925", "0000003929"))
+        elif dev.startswith("0000003929"):
+            tmp.append(dev.replace("0000003929", "0000003925"))
+
+    return tmp

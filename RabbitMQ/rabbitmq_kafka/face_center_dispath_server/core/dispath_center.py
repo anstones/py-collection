@@ -8,7 +8,7 @@ import json
 import traceback
 import hashlib
 
-from core.rabbitmq_client import RabbitmqClient
+from lib.rabbitmq_client import RabbitmqClient
 from lib.lconf import Lconf
 from lib.logger import logger
 
@@ -39,11 +39,34 @@ class DispatchCenter(object):
             self.rmq_client.channel.queue_bind(exchange=exchange, queue=queue_name, routing_key=routing_key)
 
     def handler_msg(self, data):
-        exchange, routing_key, queue_name = self.exchanges[self.index]
-        self.publish_to_rabbitmq(exchange, routing_key, json.dumps(data))
-        self.index = (self.index + 1) % len(self.exchanges)
-        return True
+        # exchange, routing_key, queue_name = self.exchanges[self.index]
+        # self.publish_to_rabbitmq(exchange, routing_key, json.dumps(data))
+        # self.index = (self.index + 1) % len(self.exchanges)
+        # return True
+        devices = data.get('devices', None)
+        if not devices:
+            logger.error("devices is null, {}".format(data))
+            return False
+        if not isinstance(devices, list):
+            devices = [devices]
 
+        for dev in devices:
+            index = self.get_hash_index(dev)
+            exchange, routing_key, _ = self.exchanges[index]
+            msg = {"send":data, "device":dev}
+            self.publish_to_rabbitmq(exchange, routing_key, json.dumps(msg))    
+
+
+    def get_hash_index(self, device):
+        """ 将设备号device哈希加密然后取模计算，达到同一个device请求送达到同一个队列 """
+        md5_inst = hashlib.md5()
+        md5_inst.update(device)
+        hash_ret = md5_inst.hexdigest()
+        value = int(hash_ret[:4], 16)  # 取前四位
+        index = value % len(self.exchanges)  # 直接取模
+        if index >= len(self.exchanges):
+            index = len(self.exchanges) - 1
+        return index
 
     def publish_to_rabbitmq(self, exchange, routing_key, msg):
         """

@@ -5,13 +5,13 @@ import grpc
 import json
 import traceback
 
-from models import Feature
-from .rpc import kafka_push_pb2, kafka_push_pb2_grpc
-from .rpc import ws_push_pb2, ws_push_pb2_grpc
-from .mq_center import MQHandler
-from .lconf import Lconf
-from .logger import logger
-from .utils import *
+# from models import Feature
+from rpc import kafka_push_pb2, kafka_push_pb2_grpc
+from rpc import ws_push_pb2, ws_push_pb2_grpc
+from core.mq_center import MQHandler
+from lib.lconf import Lconf
+from lib.logger import logger
+from lib.utils import *
 
 Global_lconf = Lconf()
 
@@ -32,7 +32,10 @@ class MsgCenter(object):
             self.ws_push_stub_ = ws_push_pb2_grpc.WsPushHandlerStub(ws_push_channel)
 
     def handler_msg(self, data):
-        """ 消息处理 """
+        """
+        消息处理 
+        data: {"cmd":"", "users":"", "devices":}
+        """
         cmd = data.get('cmd', '')
         users = data.get('users', '')
         if users == '':
@@ -40,15 +43,14 @@ class MsgCenter(object):
 
         if not isinstance(users, list):
             users = [users]
-        if cmd.endswith('user'):  # 处理人脸录入模块添加和删除用户请求
-            feature_id = data.get('feature_id', 0)
-            logger.info("cmd: %s, users: %s, feature_id: %s", cmd, users, feature_id)
-            print("通过人脸录入莫款添加和删除用户")
 
+        if cmd.endswith('user'):  # 处理人脸录入模块添加和删除用户请求
+            if cmd == 'add_user':  # 添加用户 
+                self.update_feature(data)
+            elif cmd == 'del_user':  # 删除用户 
+                pass
         else:  # 处理物业平台授权解除授权请求
             origin_devices = data.get('devices', None)
-            self.start_time = data.get("start_time", 0)
-            self.end_time = data.get("end_time", 0)
             if not origin_devices:
                 return common_response(False, '%s: devices(null) is not allowed' % cmd)
 
@@ -57,11 +59,9 @@ class MsgCenter(object):
                 # 添加设备和用户的对应关系，area如果没有会自动生成
                 logger.info("add_device {}".format(devices))
                 print("添加设备和用户的对应关系，area如果没有会自动生成")
-                self.distribute(
-                                    {'type': 'add_user',
-                                     'data': {d.device: users}
+                self.distribute({'type': 'add_user',
+                                 'data': data
                                      })
-
 
             elif cmd == 'del_device':
                 # 删除设备和用户的对应关系
@@ -70,16 +70,12 @@ class MsgCenter(object):
 
         return common_response(True, '')
 
-    def update_feature(self, u, feature_id, feature):
+    def update_feature(self, data):
         """ 更新特征 """
         print("update feature for user: %s", u)
         self.distribute({'type': 'update_feature',
-                            'data': [{'uid': u.uid,
-                                        'pic_md5': u.pic_md5,
-                                        'feature_id': f.feature_id,
-                                        'feature': f.feature
-                                        }]
-                            })
+                         'data': data
+                        })
 
     def distribute(self, msg):
         """
