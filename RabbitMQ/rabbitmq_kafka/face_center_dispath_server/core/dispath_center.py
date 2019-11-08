@@ -84,7 +84,7 @@ class DispatchCenter(object):
 
     def rmq_callback(self, ch, method, properties, body):
         try:
-            logger.info("get MQ message: " + body)
+            logger.info("get MQ message: " + str(body, encoding="utf8"))
             start_time = time.time()
             self.handler_msg(json.loads(body))
             logger.info("MQ message process done, cost time: %s", time.time() - start_time)
