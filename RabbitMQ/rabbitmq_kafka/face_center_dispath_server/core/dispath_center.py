@@ -53,14 +53,14 @@ class DispatchCenter(object):
         for dev in devices:
             index = self.get_hash_index(dev)
             exchange, routing_key, _ = self.exchanges[index]
-            msg = {"send":data, "device":dev}
-            self.publish_to_rabbitmq(exchange, routing_key, json.dumps(msg))    
+            logger.info("send:{}, device:{}".format(data, dev))
+            self.publish_to_rabbitmq(exchange, routing_key, json.dumps(data))    
 
 
     def get_hash_index(self, device):
         """ 将设备号device哈希加密然后取模计算，达到同一个device请求送达到同一个队列 """
         md5_inst = hashlib.md5()
-        md5_inst.update(device)
+        md5_inst.update(device.encode('utf8'))
         hash_ret = md5_inst.hexdigest()
         value = int(hash_ret[:4], 16)  # 取前四位
         index = value % len(self.exchanges)  # 直接取模

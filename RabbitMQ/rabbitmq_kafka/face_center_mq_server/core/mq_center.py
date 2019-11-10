@@ -40,7 +40,7 @@ class MQHandler(object):
 
             from .msg_center import MsgCenter
             msg_center_inst = MsgCenter()
-            msg_center_inst.handler_msg(json.loads(body))
+            msg_center_inst.handler_msg(json.loads(str(body, encoding = "utf8")))
             logger.info("MQ message process done, cost time: %s", time.time() - start_time)
         except Exception as e:
             # 出错，消息返回给rabbitmq

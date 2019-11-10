@@ -46,7 +46,7 @@ class MsgCenter(object):
 
         if cmd.endswith('user'):  # 处理人脸录入模块添加和删除用户请求
             if cmd == 'add_user':  # 添加用户 
-                self.update_feature(data)
+                self.update_feature(data, users)
             elif cmd == 'del_user':  # 删除用户 
                 pass
         else:  # 处理物业平台授权解除授权请求
@@ -70,9 +70,9 @@ class MsgCenter(object):
 
         return common_response(True, '')
 
-    def update_feature(self, data):
+    def update_feature(self, data, users):
         """ 更新特征 """
-        print("update feature for user: %s", u)
+        logger.info("update feature for user: %s" % users)
         self.distribute({'type': 'update_feature',
                          'data': data
                         })
