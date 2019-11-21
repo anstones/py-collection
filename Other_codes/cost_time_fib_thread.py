@@ -70,7 +70,7 @@ def hasthread():
             continue
         t.join()
 
-
+""" 测试斐波拉契用时 """
 nothread()
 hasthread()
 
