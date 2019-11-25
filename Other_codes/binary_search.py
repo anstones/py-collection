@@ -1,35 +1,28 @@
 # -*- coding: utf-8 -*-
 
 # 二分法查找，返回所查询的数值对应下标
-def binary_search(order_list,item):
-    low = 0
-    high = len(order_list)-1
+def binary_search(lists,item):
+    """ 二分法查找:循环 """
+    num_list = sorted(lists)
+    left, right = 0, len(num_list)
 
-    while high-low>1:
-        middle = (low+high)//2
-        if order_list[middle]<item:
-            low = middle+1
-        elif order_list[middle]>item:
-            high = middle-1
-        else:
-            return middle
-
-    if high-low==1:
-        if order_list[low]==item:
-            return low
-        if order_list[high]==item:
-            return high
-    if high-low==0:
-        return high
+    while left < right:
+    	middle = (left + right) // 2
+    	if lists[middle] < item:
+    		left = middle +1
+    	elif lists[middle] > item:
+    		right = middle
+    	else:
+    		return "待查元素{}在列表中下标为{}".format(item, middle)    
+    return "待查元素{}不在列表中".format(item)
 
 
 """
-递归二分法查找
+递归二分法查找：递归
 """
 def func(l, value, start=None, end=None):
     start = start if start else 0
     end = end if end else len(l)-1
-
     if start <= end:
         mid = start+end // 2
         if l[mid] == value:

@@ -1,29 +1,34 @@
-
 def binry_search(lists, item):
-	""" 二分法查找 """
-	low = 0
-	hight = len(lists)-1
+	""" 二分法查找:循环 """
+	num_list = sorted(lists)
+	left, right = 0, len(num_list)
 	
-	while hight -low >1:
-		middle = (low+hight) //2
-		
+	while left < right:
+		middle = (left + right) // 2
 		if lists[middle] < item:
-			middle +=1
+			left = middle +1
 		elif lists[middle] > item:
-			middle -= 1
+			right = middle
 		else:
-			return middle
-			
-	if hight-low ==1:
-		if lists[low] == item:
-			return low
-		elif lists[hight] == item:
-			return hight
-		
-	if hight-low == 0:
-		return hight
-		
+			return "待查元素{}在列表中下标为{}".format(item, middle)
 
+	return "待查元素{}不在列表中".format(item)
+
+
+def binry_search(num,l,start=None,end=None):
+	""" 二分法查找:递归 """
+	start = start if start else 0
+	end = end if end is None else len(l) - 1
+	mid = (end + start) // 2
+	if start > end:
+		return None
+	elif l[mid] > num :
+		return binry_search(num, l, start, mid-1)
+	elif l[mid] < num:
+		return binry_search(num, l, mid+1, end)
+	elif l[mid] == num:
+		return mid
+        
 
 def Singleton():
 	""" 单例模式 """
