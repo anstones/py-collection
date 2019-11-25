@@ -32,12 +32,16 @@ for freq in count_sort[:10]:
     print(freq)
 
 
-result = defaultdict(int)
+file_path = "C:\\Users\\Administrator\\Desktop\\oeasy\\data\\mine\\Project\\project\\aa.txt"
+result = {}
 with open(file_path) as f:
     for line in f:
         for word in filter(None,line.strip().split(' ')):
-            result['word'] += 1
-print(sorted(result.items(), key=lambda(x,y):y, reverse=True))[:10])
+            if word in count:
+                count[word] += 1
+            else:
+                count[word] = 1
+a = sorted(result.items(), key=lambda k:k[1], reverse=True)[:11]
     
 
 
