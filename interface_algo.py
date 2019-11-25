@@ -18,7 +18,7 @@ def binry_search(lists, item):
 def binry_search(num,l,start=None,end=None):
 	""" 二分法查找:递归 """
 	start = start if start else 0
-	end = end if end is None else len(l) - 1
+	end = end if end else len(l) - 1
 	mid = (end + start) // 2
 	if start > end:
 		return None
