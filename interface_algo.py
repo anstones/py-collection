@@ -53,7 +53,7 @@ def func(n):
 	
 
 def mp_sort(li):
-	""" 冒泡排序 """
+    """ 冒泡排序 """
     for i in range(len(li)):
         for j in range(len(li)-i-1):
             if li[j] > li[j+1]:

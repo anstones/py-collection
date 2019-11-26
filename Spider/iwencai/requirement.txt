@@ -1,0 +1,4 @@
+python == 3.6.2
+requests == 2.22.0
+selenium == 3.141.0
+pandas == 0.25.0
