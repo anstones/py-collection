@@ -9,7 +9,7 @@
     requirement.txt
 
 ## 开始
-    python3 wencai_spier.py
+    python3 wencai.py
 
 ## 说明
     今天公司事情较多，时间比较仓促，所以暂未实现代理池和cookies池，后续可以完善。
